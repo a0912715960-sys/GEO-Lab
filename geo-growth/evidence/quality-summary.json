@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-16T15:25:57.241Z",
+  "unit": {
+    "tests": 48,
+    "passed": 48,
+    "failed": 0
+  },
+  "browserUI": {
+    "passed": 13,
+    "method": "Codex in-app browser, actual local HTTP service"
+  },
+  "headlessScript": "blocked-at-launch",
+  "filePreview": "not-verified",
+  "externalSupplierRequests": 0,
+  "approvalIdentity": true
+}

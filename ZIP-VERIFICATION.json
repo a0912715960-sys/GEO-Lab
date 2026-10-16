@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 3,
+  "ok": true,
+  "zip": "GEO-Growth-Lab.zip",
+  "sha256": "a293ce18a6680a167676c81b1995d3f64973633bf396ba4b672f5c02480b6ba4",
+  "bytes": 1093031,
+  "verifiedFiles": 68,
+  "zipEntries": 69,
+  "bundleSha256": "c165e9962814898461d08e4edc2a7193b3031d48f5b0830da0b58288998887a6",
+  "sourceCommit": "ecec9416f4db9364f57c277d8a24003160df0491"
+}

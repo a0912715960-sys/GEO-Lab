@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "bundler": "esbuild",
+  "bundlerVersion": "0.28.2",
+  "bundleSha256": "c165e9962814898461d08e4edc2a7193b3031d48f5b0830da0b58288998887a6",
+  "inputs": {
+    "src/bootstrap.js": "bdaf1389d5b9059d84fd917cfef86e181ba21694250d8e992f51d3e4e91aff8d",
+    "src/hash.mjs": "9c83b0329b67ce6e776d55183c305b47cd5fe2c613a5784934057dafb5238b10",
+    "src/platform.mjs": "ddf358b33506faca8c559ab37291ba93119321e8e7628fbf9c7d4fd02d567b70",
+    "src/style.css": "77fb6c64cb3f94c6e75542f5aaa8e5dd9ed0d3be73391082ca81023ed270d506",
+    "src/ui.mjs": "88d6c4336c74d27d591d0fa3f4fc35b58e07edbd2627f20ebd181ae99c1e5e25"
+  },
+  "generated": [
+    "dist/app.js",
+    "dist/index.html",
+    "OFFLINE-DEMO.html",
+    "../GEO-Growth-Demo.html"
+  ]
+}

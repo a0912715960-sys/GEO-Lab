@@ -1,0 +1,2624 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="geo-bundle-sha256" content="c165e9962814898461d08e4edc2a7193b3031d48f5b0830da0b58288998887a6"><title>GEO SIGNAL · 智能监测与优化平台</title><style>:root {
+  font-family: Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  color: #24324a;
+  background: #f5f7fb;
+  font-synthesis: none;
+  --primary: #455cec;
+  --border: #e4e9f2;
+  --muted: #738198;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button,
+a,
+input,
+select,
+textarea {
+  outline-offset: 3px;
+}
+button {
+  cursor: pointer;
+  background: white;
+  color: #40516b;
+  border: 1px solid #dce3ef;
+  border-radius: 7px;
+  padding: 8px 13px;
+  font-size: 12px;
+  transition: background 0.15s;
+}
+button:hover {
+  background: #f0f3ff;
+  border-color: #bec8ed;
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+.primary {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+.primary:hover {
+  background: #3449ce;
+  color: white;
+}
+a {
+  color: #455cec;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+small {
+  font-size: 11px;
+  color: var(--muted);
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1 {
+  font-size: 27px;
+  line-height: 1.45;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+h2 {
+  font-size: 15px;
+  margin: 0;
+}
+h3 {
+  font-size: 14px;
+  margin: 14px 0 8px;
+}
+p {
+  color: #6b7990;
+}
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 228px;
+  background: #131e36;
+  color: #d0dbef;
+  padding: 28px 17px;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  overflow-y: auto;
+}
+.logo {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  color: white;
+  font-size: 17px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  padding: 0 8px;
+}
+.logo:hover {
+  text-decoration: none;
+}
+.logo > span {
+  display: grid;
+  place-items: center;
+  background: #6172f4;
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.logo small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #98aac8;
+  font-weight: 400;
+}
+.workspace {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #1c2a45;
+  border: 1px solid #2a3954;
+  border-radius: 9px;
+  padding: 12px;
+  margin: 29px 0 23px;
+}
+.workspace b {
+  font-size: 12px;
+}
+.workspace small {
+  display: block;
+  color: #8192af;
+  font-size: 10px;
+}
+.avatar {
+  width: 31px;
+  height: 31px;
+  border-radius: 8px;
+  background: #394464;
+  display: grid;
+  place-items: center;
+  color: #ccd4ff;
+}
+.nav-label {
+  color: #7487aa;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  padding: 0 15px 10px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  color: #98aac9;
+  border-radius: 7px;
+  padding: 11px 14px;
+  margin: 3px 0;
+  font-size: 12px;
+}
+.nav i {
+  font-size: 18px;
+  font-style: normal;
+  width: 21px;
+  text-align: center;
+  color: #7d91b6;
+}
+.nav.active {
+  background: #3346aa;
+  color: white;
+}
+.nav.active i {
+  color: #d4dcff;
+}
+.nav:hover {
+  background: #263756;
+  border: 0;
+  color: white;
+}
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 24px;
+}
+.sidebar-bottom button {
+  background: transparent;
+  border: 0;
+  color: #91a3c2;
+  display: block;
+  margin: 6px 0;
+  font-size: 11px;
+}
+.sidebar-bottom p {
+  font-size: 9px;
+  color: #59708f;
+  padding: 10px 14px;
+  letter-spacing: 1px;
+  margin: 8px 0 0;
+}
+.main {
+  margin-left: 228px;
+}
+.topbar {
+  height: 69px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 0 35px;
+  color: #8b96a8;
+  font-size: 11px;
+}
+.topbar b {
+  color: #4c5a73;
+  font-weight: 500;
+  margin-left: 8px;
+}
+.connection {
+  color: #648c7c;
+  font-size: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.row h3 {
+  margin: 0;
+}
+.row small {
+  flex: 1;
+}
+.scopebar {
+  padding: 14px 35px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  background: #fbfcff;
+  flex-wrap: wrap;
+}
+.scopebar label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #8491a5;
+  white-space: nowrap;
+}
+.scopebar select {
+  padding: 5px 9px;
+  font-size: 11px;
+  max-width: 250px;
+}
+.page {
+  padding: 30px 35px;
+  max-width: 1590px;
+  margin: auto;
+  min-height: 80vh;
+}
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.page-heading p {
+  font-size: 12px;
+  margin: 6px 0 0;
+}
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 1.7px;
+  color: #8794aa;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 23px;
+}
+.stat {
+  padding: 21px 23px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 3px 8px #22334b03;
+}
+.stat span {
+  font-size: 11px;
+  color: #73849e;
+}
+.stat strong {
+  font-size: 36px;
+  line-height: 1.4;
+  color: #243451;
+  font-weight: 600;
+  margin: 8px 0;
+}
+.stat small {
+  font-size: 10px;
+}
+.panel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 21px;
+  padding: 23px;
+  min-width: 0;
+  box-shadow: 0 3px 8px #22334b02;
+}
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.grid {
+  display: grid;
+  gap: 21px;
+}
+.two {
+  grid-template-columns: 1fr 1fr;
+}
+.knowledge-grid {
+  grid-template-columns: 260px 1fr;
+}
+.content-grid {
+  grid-template-columns: 240px 1fr;
+}
+.funnel {
+  padding: 0 12px;
+}
+.funnel > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 24px;
+  margin: 10px auto;
+  border-radius: 6px;
+  background: #f1f4ff;
+  color: #4d60bf;
+}
+.funnel > div:nth-child(2) {
+  width: 87%;
+  background: #e6ebff;
+}
+.funnel > div:nth-child(3) {
+  width: 73%;
+  background: #d6dffd;
+}
+.funnel b {
+  font-size: 27px;
+  font-weight: 600;
+  min-width: 45px;
+}
+.funnel span {
+  font-size: 11px;
+}
+.funnel i {
+  font-size: 10px;
+  font-style: normal;
+  margin-left: auto;
+}
+.caption {
+  font-size: 10px;
+  margin: 13px 0 0;
+  color: #8995a9;
+  line-height: 1.8;
+}
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: steps;
+}
+.steps li {
+  position: relative;
+  counter-increment: steps;
+  padding: 0 80px 19px 36px;
+}
+.steps li:before {
+  content: counter(steps);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #f0f3fc;
+  color: #7586bc;
+  font-size: 11px;
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.steps b {
+  display: block;
+  font-size: 12px;
+  color: #495d7c;
+}
+.steps span {
+  display: block;
+  font-size: 10px;
+  color: #8d9bb0;
+  margin-top: 3px;
+}
+.steps button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 0;
+  color: #6777cf;
+  background: transparent;
+  font-size: 10px;
+  padding: 4px;
+}
+.inline-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  font-size: 11px;
+  color: #8995aa;
+}
+.inline-stats b {
+  display: block;
+  font-size: 21px;
+  font-weight: 500;
+  color: #334661;
+  margin-top: 4px;
+}
+.chip {
+  display: inline-block;
+  border-radius: 5px;
+  background: #f0f3f8;
+  color: #7b88a0;
+  font-size: 10px;
+  padding: 3px 7px;
+  white-space: nowrap;
+}
+.chip.amber {
+  background: #fff4df;
+  color: #a67b2f;
+}
+.chip.blue {
+  background: #ecf1ff;
+  color: #6383b8;
+}
+.chip.green {
+  background: #eaf6ef;
+  color: #528669;
+}
+.product {
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid transparent;
+  margin: 5px 0;
+  border-radius: 8px;
+  white-space: normal;
+}
+.product.selected {
+  background: #f0f3ff;
+  border-color: #dbe2ff;
+}
+.product strong {
+  display: block;
+  color: #34435f;
+  font-size: 12px;
+}
+.product > span:not(.chip) {
+  display: block;
+  font-size: 11px;
+  color: #7b8ba3;
+  margin: 5px 0;
+}
+.product small {
+  display: block;
+  margin-top: 6px;
+  font-size: 10px;
+}
+.product .chip {
+  margin-top: 7px;
+}
+.source-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #f0f3f8;
+  padding: 15px 0;
+}
+.source-row:last-child {
+  border: 0;
+}
+.source-row b,
+.source-row a {
+  font-size: 12px;
+}
+.source-row small {
+  display: block;
+  overflow-wrap: anywhere;
+  margin-top: 5px;
+}
+.source-row p {
+  font-size: 11px;
+  margin: 5px 0;
+}
+.table-wrap {
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  text-align: left;
+}
+th {
+  color: #95a0b3;
+  font-size: 10px;
+  font-weight: 500;
+  background: #fafbfe;
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--border);
+}
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #edf0f5;
+  vertical-align: top;
+}
+td b {
+  font-size: 11px;
+  font-weight: 500;
+  display: block;
+  max-width: 400px;
+}
+td small {
+  display: block;
+  margin: 4px 0;
+  font-size: 9px;
+}
+td button {
+  font-size: 10px;
+  padding: 5px 9px;
+  margin: 2px;
+}
+.empty {
+  text-align: center;
+  padding: 35px 20px;
+}
+.empty-icon {
+  font-size: 34px;
+  color: #bac7e4;
+}
+.empty h3 {
+  color: #657795;
+  margin: 12px 0 8px;
+}
+.empty p {
+  font-size: 11px;
+  max-width: 490px;
+  margin: 0 auto 15px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: end;
+}
+label {
+  font-size: 11px;
+  color: #7b88a0;
+  display: block;
+}
+label input,
+label select,
+label textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+}
+input,
+select,
+textarea {
+  border: 1px solid #dce4ef;
+  color: #465672;
+  background: #fff;
+  border-radius: 6px;
+  padding: 9px 11px;
+  max-width: 100%;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #8c9ded;
+}
+textarea {
+  resize: vertical;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.7;
+}
+input[type='checkbox'] {
+  width: auto;
+  display: inline-block;
+}
+input[type='file'] {
+  width: 100%;
+  font-size: 11px;
+  margin-bottom: 18px;
+}
+.checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 20px 0;
+}
+.checkbox input {
+  margin: 0;
+}
+pre {
+  background: #f5f7fc;
+  border: 1px solid #e8edf5;
+  padding: 14px;
+  font-size: 10px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 450px;
+  overflow: auto;
+  border-radius: 6px;
+  color: #566985;
+}
+details {
+  margin: 12px 0;
+  font-size: 11px;
+}
+summary {
+  cursor: pointer;
+  color: #6074af;
+}
+.stack {
+  display: grid;
+  gap: 15px;
+}
+.prompt-editor,
+.plan-card,
+.segment {
+  padding: 18px 0;
+  border-bottom: 1px solid #e9edf5;
+}
+.prompt-editor:first-child,
+.plan-card:first-child,
+.segment:first-child {
+  padding-top: 0;
+}
+.prompt-editor:last-child,
+.plan-card:last-child,
+.segment:last-child {
+  border-bottom: 0;
+}
+.prompt-editor textarea {
+  margin: 12px 0;
+}
+.plan-card p {
+  font-size: 11px;
+  margin: 10px 0;
+}
+.diff {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 13px 0;
+}
+.diff pre {
+  margin: 6px 0;
+  min-height: 172px;
+}
+.diff textarea {
+  margin-top: 6px;
+}
+.notice {
+  background: #f7f8fd;
+  border-left: 3px solid #bcc6eb;
+  color: #7987a5;
+  padding: 13px 16px;
+  margin: 16px 0;
+  font-size: 11px;
+}
+.provider-list > div {
+  padding: 15px 0;
+  border-bottom: 1px solid #eef1f7;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.provider-list small {
+  display: block;
+  width: 100%;
+}
+.provider-list + p,
+.provider-list + p + p {
+  font-size: 12px;
+}
+.mini-stats {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+footer {
+  padding: 15px 35px 30px;
+  text-align: right;
+  color: #abb4c5;
+  font-size: 9px;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #0d193970;
+  z-index: 20;
+  display: flex;
+  justify-content: flex-end;
+  backdrop-filter: blur(2px);
+}
+.drawer {
+  width: min(740px, 100vw);
+  padding: 27px 30px;
+  background: white;
+  overflow: auto;
+  box-shadow: -15px 0 70px #0c163220;
+}
+.drawer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 15px;
+}
+.drawer-head h2 {
+  font-size: 18px;
+}
+.drawer p {
+  font-size: 12px;
+}
+.drawer .answer {
+  font-size: 13px;
+  color: #304564;
+  background: #f5f7fc;
+}
+.drawer h3 {
+  margin-top: 24px;
+}
+.muted {
+  color: #8a97aa;
+  font-size: 10px;
+}
+.startup {
+  max-width: 700px;
+  margin: 12vh auto;
+  padding: 30px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+#toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #23334f;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 8px;
+  z-index: 50;
+  box-shadow: 0 5px 25px #14213930;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  max-width: 80vw;
+}
+#toast.show {
+  opacity: 1;
+}
+@media (min-width: 1600px) {
+  .page {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 195px;
+    padding: 22px 12px;
+  }
+  .main {
+    margin-left: 195px;
+  }
+  .page,
+  .scopebar {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+  .topbar {
+    padding: 0 23px;
+  }
+  .knowledge-grid,
+  .content-grid {
+    grid-template-columns: 200px 1fr;
+  }
+  .two {
+    grid-template-columns: 1fr;
+  }
+  .stats {
+    gap: 10px;
+  }
+  .stat {
+    padding: 16px;
+  }
+  .stat strong {
+    font-size: 30px;
+  }
+  .logo {
+    font-size: 14px;
+  }
+  .logo small {
+    font-size: 9px;
+  }
+  .diff {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 721px) and (max-height: 850px) {
+  .sidebar {
+    padding-top: 18px;
+    padding-bottom: 10px;
+  }
+  .workspace {
+    margin: 20px 0 16px;
+  }
+  .nav {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .sidebar-bottom {
+    padding-top: 8px;
+  }
+  .sidebar-bottom p {
+    padding: 4px 14px;
+    margin-top: 2px;
+  }
+}
+@media (max-width: 720px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: 15px;
+  }
+  .logo {
+    padding: 0;
+  }
+  .workspace,
+  .nav-label {
+    display: none;
+  }
+  .sidebar-bottom {
+    display: flex;
+    padding: 0;
+    gap: 8px;
+  }
+  .sidebar-bottom p {
+    display: none;
+  }
+  .sidebar-bottom button {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+  .sidebar nav {
+    display: flex;
+    overflow: auto;
+    margin-top: 10px;
+  }
+  .nav {
+    white-space: nowrap;
+    width: auto;
+    font-size: 10px;
+    padding: 7px 10px;
+    margin: 0;
+  }
+  .nav i {
+    display: none;
+  }
+  .main {
+    margin: 0;
+  }
+  .topbar {
+    height: 55px;
+    padding: 0 15px;
+  }
+  .connection {
+    display: none;
+  }
+  .scopebar {
+    padding: 10px 15px;
+    gap: 10px;
+  }
+  .page {
+    padding: 22px 15px;
+  }
+  .page-heading {
+    display: block;
+  }
+  .page-heading > div + div {
+    margin-top: 12px;
+  }
+  h1 {
+    font-size: 23px;
+  }
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stat strong {
+    font-size: 28px;
+  }
+  .knowledge-grid,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-list {
+    display: flex;
+    overflow: auto;
+  }
+  .product-list .product {
+    min-width: 180px;
+  }
+  .panel {
+    padding: 17px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .drawer {
+    padding: 20px;
+  }
+  .scopebar .chip {
+    font-size: 9px;
+  }
+  .topbar > span {
+    font-size: 10px;
+  }
+  .inline-stats {
+    gap: 17px;
+  }
+  .page-heading p {
+    font-size: 11px;
+  }
+}
+</style></head><body><div id="app"><main class="startup"><h1>GEO SIGNAL · 智能监测与优化平台</h1><p>如果一直看到这段说明，当前预览没有执行脚本。请下载 HTML 文件，用 Edge 或 Chrome 打开。</p><noscript><p>此处 JavaScript 被禁用。</p></noscript></main></div><div id="toast" role="status"></div><script>window.GEO_ASSETS={"docsBase":"","packageUrl":"README.md"};</script><script>(function () {
+  window.__geoReady = false;
+  window.__geoStartupFail = function (error) {
+    if (window.__geoReady) return;
+    const host = document.getElementById('app');
+    if (!host) return;
+    const box = document.createElement('main');
+    box.className = 'startup';
+    const title = document.createElement('h1');
+    title.textContent = '工作台未能启动';
+    const help = document.createElement('p');
+    help.textContent =
+      '这不是后台仍在计算。请下载 GEO-Growth-Demo.html，用 Edge 或 Chrome 打开；若使用完整后端，请先启动本地服务。';
+    const details = document.createElement('p');
+    details.className = 'fine';
+    details.textContent =
+      '启动信息：' + String((error && error.message) || error || '页面脚本未执行');
+    box.append(title, help, details);
+    host.replaceChildren(box);
+  };
+  window.addEventListener('error', function (e) {
+    window.__geoStartupFail(e.error || e.message);
+  });
+  window.addEventListener('unhandledrejection', function (e) {
+    window.__geoStartupFail(e.reason);
+  });
+  setTimeout(function () {
+    if (!window.__geoReady) window.__geoStartupFail('启动超过5秒，请使用离线文件或检查本地服务。');
+  }, 5000);
+})();
+</script><script data-geo-bundle>// GENERATED by scripts/build.mjs from src/. Do not edit this bundle.
+(() => {
+  // src/hash.mjs
+  var constants = [
+    1116352408,
+    1899447441,
+    3049323471,
+    3921009573,
+    961987163,
+    1508970993,
+    2453635748,
+    2870763221,
+    3624381080,
+    310598401,
+    607225278,
+    1426881987,
+    1925078388,
+    2162078206,
+    2614888103,
+    3248222580,
+    3835390401,
+    4022224774,
+    264347078,
+    604807628,
+    770255983,
+    1249150122,
+    1555081692,
+    1996064986,
+    2554220882,
+    2821834349,
+    2952996808,
+    3210313671,
+    3336571891,
+    3584528711,
+    113926993,
+    338241895,
+    666307205,
+    773529912,
+    1294757372,
+    1396182291,
+    1695183700,
+    1986661051,
+    2177026350,
+    2456956037,
+    2730485921,
+    2820302411,
+    3259730800,
+    3345764771,
+    3516065817,
+    3600352804,
+    4094571909,
+    275423344,
+    430227734,
+    506948616,
+    659060556,
+    883997877,
+    958139571,
+    1322822218,
+    1537002063,
+    1747873779,
+    1955562222,
+    2024104815,
+    2227730452,
+    2361852424,
+    2428436474,
+    2756734187,
+    3204031479,
+    3329325298
+  ];
+  var rotate = (value, bits) => value >>> bits | value << 32 - bits;
+  function sha256(value) {
+    const bytes = new TextEncoder().encode(value);
+    const padded = new Uint8Array(Math.ceil((bytes.length + 9) / 64) * 64);
+    padded.set(bytes);
+    padded[bytes.length] = 128;
+    const view = new DataView(padded.buffer), bits = bytes.length * 8;
+    view.setUint32(padded.length - 8, Math.floor(bits / 2 ** 32));
+    view.setUint32(padded.length - 4, bits >>> 0);
+    const state = [
+      1779033703,
+      3144134277,
+      1013904242,
+      2773480762,
+      1359893119,
+      2600822924,
+      528734635,
+      1541459225
+    ];
+    for (let offset = 0; offset < padded.length; offset += 64) {
+      const words = new Uint32Array(64);
+      for (let i = 0; i < 16; i++) words[i] = view.getUint32(offset + i * 4);
+      for (let i = 16; i < 64; i++) {
+        const a2 = words[i - 15], b2 = words[i - 2];
+        words[i] = words[i - 16] + (rotate(a2, 7) ^ rotate(a2, 18) ^ a2 >>> 3) + words[i - 7] + (rotate(b2, 17) ^ rotate(b2, 19) ^ b2 >>> 10) >>> 0;
+      }
+      let [a, b, c, d, e, f, g, h] = state;
+      for (let i = 0; i < 64; i++) {
+        const t1 = h + (rotate(e, 6) ^ rotate(e, 11) ^ rotate(e, 25)) + (e & f ^ ~e & g) + constants[i] + words[i] >>> 0;
+        const t2 = (rotate(a, 2) ^ rotate(a, 13) ^ rotate(a, 22)) + (a & b ^ a & c ^ b & c) >>> 0;
+        h = g;
+        g = f;
+        f = e;
+        e = d + t1 >>> 0;
+        d = c;
+        c = b;
+        b = a;
+        a = t1 + t2 >>> 0;
+      }
+      [a, b, c, d, e, f, g, h].forEach((value2, i) => state[i] = state[i] + value2 >>> 0);
+    }
+    return state.map((x) => x.toString(16).padStart(8, "0")).join("");
+  }
+  function canonicalJson(value) {
+    if (Array.isArray(value)) return "[" + value.map(canonicalJson).join(",") + "]";
+    if (value && typeof value === "object")
+      return "{" + Object.keys(value).sort().map((k) => JSON.stringify(k) + ":" + canonicalJson(value[k])).join(",") + "}";
+    return JSON.stringify(value);
+  }
+  var artifactHash = (value) => sha256(canonicalJson(value));
+
+  // src/platform.mjs
+  var VERSION = "3.0.0";
+  var copy = (value) => structuredClone(value);
+  function check(ok, message, status = 400) {
+    if (!ok) throw Object.assign(new Error(message), { status });
+  }
+  var now = () => (/* @__PURE__ */ new Date()).toISOString();
+  var uid = (prefix) => prefix + "-" + globalThis.crypto.randomUUID();
+  var event = (s, action, entity) => s.events.push({ id: uid("evt"), at: now(), action, entity });
+  var find = (list, id) => {
+    const item = list.find((x) => x.id === id);
+    check(item, "\u8BB0\u5F55\u4E0D\u5B58\u5728", 404);
+    return item;
+  };
+  var text = (value, max = 4e3) => {
+    check(typeof value === "string" && value.trim() && value.length <= max, "\u5FC5\u586B\u6587\u672C\u4E3A\u7A7A\u6216\u8D85\u957F");
+    return value.trim();
+  };
+  var technicalSources = [
+    {
+      title: "OpenAI \xB7 Web search",
+      url: "https://developers.openai.com/api/docs/guides/tools-web-search",
+      note: "\u5B98\u65B9 API \u641C\u7D22\u4E0E\u5F15\u7528\u683C\u5F0F\uFF1BAPI \u6837\u672C\u4E0D\u7B49\u4E8E\u6D88\u8D39\u8005\u7AEF\u66DD\u5149\u3002"
+    },
+    {
+      title: "Gemini \xB7 Google Search grounding",
+      url: "https://ai.google.dev/gemini-api/docs/google-search",
+      note: "\u5B98\u65B9\u8054\u7F51\u5DE5\u5177\u4E0E\u6765\u6E90\u6807\u6CE8\u3002"
+    },
+    {
+      title: "OpenAI \xB7 Crawlers",
+      url: "https://developers.openai.com/api/docs/bots",
+      note: "\u5141\u8BB8\u6293\u53D6\u4E0D\u4FDD\u8BC1\u6536\u5F55\u3001\u6392\u5E8F\u6216\u5F15\u7528\u3002"
+    },
+    {
+      title: "Google \xB7 AI features and your website",
+      url: "https://developers.google.com/search/docs/appearance/ai-features",
+      note: "Google Search AI \u529F\u80FD\u4E0E Gemini API \u5206\u5F00\u8BC4\u4F30\u3002"
+    },
+    {
+      title: "Raspberry Pi 5 \xB7 \u5B98\u65B9\u89C4\u683C",
+      url: "https://www.raspberrypi.com/products/raspberry-pi-5/",
+      note: "\u4EC5\u4FDD\u5B58\u5C11\u91CF\u516C\u5F00\u89C4\u683C\u4E8B\u5B9E\u3002"
+    }
+  ];
+  function initialState() {
+    const s = {
+      schemaVersion: 3,
+      revision: 0,
+      workspace: {
+        brand: "Northstar",
+        aliases: ["Northstar"],
+        domain: "northstar.example",
+        competitors: ["RivalWorks"],
+        provenance: "synthetic"
+      },
+      products: [],
+      sources: [],
+      facts: [],
+      prompts: [],
+      plans: [],
+      runs: [],
+      diagnoses: [],
+      revisions: [],
+      experiments: [],
+      events: []
+    };
+    importProducts(s, {
+      origin: "synthetic",
+      name: "\u5185\u7F6E\u5DE5\u4E1A\u5546\u54C1\u6848\u4F8B",
+      rows: [
+        {
+          sku: "P-200",
+          name: "304 \u4E0D\u9508\u94A2\u79BB\u5FC3\u6CF5",
+          category: "stainless steel centrifugal pump",
+          series: "\u6CF5\u7CFB\u5217",
+          material: "Stainless steel 304",
+          flow: "20 m\xB3/h",
+          power: "3 kW"
+        },
+        {
+          sku: "V-100",
+          name: "\u4E0D\u9508\u94A2\u7403\u9600",
+          category: "industrial ball valve",
+          series: "\u9600\u7CFB\u5217",
+          material: "Stainless steel 304",
+          size: "DN25",
+          pressure: "PN16"
+        }
+      ]
+    });
+    importProducts(s, {
+      origin: "public",
+      name: "Raspberry Pi 5 \u5B98\u65B9\u89C4\u683C\u6458\u5F55",
+      url: technicalSources[4].url,
+      rows: [
+        {
+          sku: "PI5",
+          name: "Raspberry Pi 5",
+          category: "single-board computer",
+          brand: "Raspberry Pi",
+          processor: "Broadcom BCM2712, 2.4GHz quad-core Arm Cortex-A76",
+          power: "5V/5A DC via USB-C"
+        }
+      ]
+    });
+    s.facts.forEach((f) => {
+      f.status = "approved";
+      f.reviewedAt = now();
+    });
+    s.events = [];
+    return s;
+  }
+  function parseCSV(input) {
+    check(typeof input === "string" && input.length <= 1e6, "CSV \u592A\u5927");
+    const rows = [];
+    let row = [], cell = "", quoted = false;
+    for (let i = 0; i < input.length; i++) {
+      const c = input[i];
+      if (c === '"') {
+        if (quoted && input[i + 1] === '"') {
+          cell += '"';
+          i++;
+        } else quoted = !quoted;
+      } else if (c === "," && !quoted) {
+        row.push(cell);
+        cell = "";
+      } else if ((c === "\n" || c === "\r") && !quoted) {
+        if (c === "\r" && input[i + 1] === "\n") i++;
+        row.push(cell);
+        if (row.some(Boolean)) rows.push(row);
+        row = [];
+        cell = "";
+      } else cell += c;
+    }
+    check(!quoted, "CSV \u5F15\u53F7\u672A\u95ED\u5408");
+    row.push(cell);
+    if (row.some(Boolean)) rows.push(row);
+    const headers = (rows.shift() || []).map((x) => x.replace(/^\uFEFF/, "").trim());
+    check(
+      headers.includes("sku") && headers.includes("name") && headers.includes("category"),
+      "CSV \u5FC5\u987B\u5305\u542B sku,name,category"
+    );
+    check(new Set(headers).size === headers.length, "CSV \u8868\u5934\u91CD\u590D");
+    check(
+      rows.every((r) => r.length === headers.length),
+      "CSV \u5217\u6570\u4E0D\u4E00\u81F4"
+    );
+    return rows.map((r) => Object.fromEntries(headers.map((h, i) => [h, r[i]])));
+  }
+  function importProducts(s, input) {
+    const rows = input.csv ? parseCSV(input.csv) : input.rows;
+    check(Array.isArray(rows) && rows.length > 0 && rows.length <= 500, "\u5BFC\u5165\u9700\u8981 1\u2013500 \u884C\u5546\u54C1");
+    check(["public", "authorized", "synthetic"].includes(input.origin), "\u5FC5\u987B\u58F0\u660E\u8D44\u6599\u6765\u6E90\u7C7B\u578B");
+    check(
+      !input.context || typeof input.context === "string" && input.context.length <= 1e6,
+      "\u539F\u6587\u4E0A\u4E0B\u6587\u8FC7\u957F"
+    );
+    const source = {
+      id: uid("src"),
+      name: text(input.name, 200),
+      origin: input.origin,
+      url: input.url || null,
+      checksum: artifactHash(rows),
+      contextChecksum: input.context ? artifactHash(input.context) : null,
+      status: "active",
+      version: 1 + s.sources.filter((src) => src.name === input.name && src.origin === input.origin).length,
+      at: now(),
+      context: input.context || copy(rows)
+    };
+    const duplicate = s.sources.find(
+      (src) => src.status === "active" && src.origin === source.origin && src.checksum === source.checksum && src.contextChecksum === source.contextChecksum
+    );
+    if (duplicate) {
+      event(s, "import:duplicate", duplicate.id);
+      return duplicate;
+    }
+    s.sources.push(source);
+    for (const [index, row] of rows.entries()) {
+      const sku = text(row.sku, 100);
+      text(row.name, 300);
+      text(row.category, 200);
+      let p = s.products.find((x) => x.sku === sku);
+      if (!p) {
+        p = {
+          id: uid("prod"),
+          sku,
+          name: row.name,
+          category: row.category,
+          series: row.series || row.category,
+          brand: row.brand || s.workspace.brand,
+          origin: input.origin,
+          description: row.description || ""
+        };
+        s.products.push(p);
+      }
+      for (const [attribute, value] of Object.entries(row)) {
+        if (["sku", "name", "category", "series", "brand", "description", "source_locator"].includes(
+          attribute
+        ) || /_(unit|conditions)$/.test(attribute) || value === "" || value == null)
+          continue;
+        check(typeof value === "string" || typeof value === "number", "\u5546\u54C1\u5B57\u6BB5\u4EC5\u63A5\u53D7\u6587\u672C\u6216\u6570\u5B57");
+        const conflict = s.facts.some(
+          (f) => f.productId === p.id && f.attribute === attribute && (f.value !== String(value) || f.unit !== (row[attribute + "_unit"] || "")) && f.conditions === (row[attribute + "_conditions"] || "") && f.status !== "rejected" && s.sources.find((src) => src.id === f.sourceId)?.status === "active"
+        );
+        s.facts.push({
+          id: uid("fact"),
+          productId: p.id,
+          attribute,
+          value: String(value),
+          unit: row[attribute + "_unit"] || "",
+          conditions: row[attribute + "_conditions"] || "",
+          sourceId: source.id,
+          locator: (row.source_locator || "row:" + (index + 2)) + "/" + attribute,
+          originalText: attribute + ": " + value,
+          sourceChecksum: source.checksum,
+          version: 1 + s.facts.filter((f) => f.productId === p.id && f.attribute === attribute).length,
+          status: conflict ? "conflict" : "pending",
+          at: now()
+        });
+      }
+    }
+    event(s, "import", source.id);
+    return source;
+  }
+  function usableFacts(s, productId) {
+    return s.facts.filter(
+      (f) => f.productId === productId && f.status === "approved" && s.sources.some((x) => x.id === f.sourceId && x.status === "active")
+    );
+  }
+  function retrieve(s, productId, query) {
+    find(s.products, productId);
+    const tokens = String(query).toLowerCase().match(/[\p{L}\p{N}]+/gu) || [];
+    return usableFacts(s, productId).map((f) => ({
+      ...f,
+      score: tokens.reduce(
+        (n, t) => n + ((f.attribute + " " + f.value).toLowerCase().includes(t) ? 1 : 0),
+        0
+      ),
+      method: "SKU exact scope + lexical ranking"
+    })).sort((a, b) => b.score - a.score);
+  }
+  function reviewFact(s, { id, decision }) {
+    const f = find(s.facts, id);
+    check(["approve", "reject"].includes(decision), "\u5BA1\u6279\u52A8\u4F5C\u65E0\u6548");
+    if (decision === "approve") {
+      for (const other of s.facts)
+        if (other.id !== id && other.productId === f.productId && other.attribute === f.attribute && (other.value !== f.value || other.unit !== f.unit) && other.conditions === f.conditions && other.status === "approved")
+          other.status = "superseded";
+    }
+    f.status = decision === "approve" ? "approved" : "rejected";
+    f.reviewedAt = now();
+    event(s, "fact:" + decision, id);
+    return f;
+  }
+  function withdrawSource(s, { id }) {
+    find(s.sources, id).status = "withdrawn";
+    event(s, "source:withdraw", id);
+  }
+  function configureWorkspace(s, input) {
+    const domain = text(input.domain, 253).toLowerCase();
+    check(
+      /^[a-z0-9.-]+\.[a-z]{2,}$/.test(domain) && !domain.includes(".."),
+      "\u8F93\u5165\u57DF\u540D\uFF0C\u4F8B\u5982 example.com\uFF0C\u4E0D\u542B\u534F\u8BAE"
+    );
+    s.workspace = {
+      brand: text(input.brand, 100),
+      aliases: [
+        ...new Set(
+          [input.brand, ...(input.aliases || "").split(",")].map((x) => x.trim()).filter(Boolean)
+        )
+      ],
+      domain,
+      competitors: (input.competitors || "").split(",").map((x) => x.trim()).filter(Boolean),
+      provenance: input.provenance === "synthetic" ? "synthetic" : "user-declared"
+    };
+    event(s, "workspace:update", domain);
+    return s.workspace;
+  }
+  function generatePrompts(s, { productId, language = "en", country = "US" }) {
+    const p = find(s.products, productId);
+    check(["en", "de", "zh"].includes(language), "\u5F53\u524D\u6A21\u677F\u652F\u6301 en / de / zh");
+    check(usableFacts(s, productId).length, "\u5148\u5BA1\u6838\u5546\u54C1\u4E8B\u5B9E");
+    const templates = {
+      en: [
+        ["supplier", `Which suppliers offer ${p.category} for industrial procurement?`],
+        ["selection", `How should a buyer select a ${p.category}?`],
+        ["specification", `What technical specifications should I compare for ${p.category}?`],
+        ["commercial", `What should I verify about MOQ and delivery when sourcing ${p.category}?`]
+      ],
+      de: [
+        ["supplier", `Welche Lieferanten bieten ${p.category} f\xFCr die industrielle Beschaffung an?`],
+        ["selection", `Wie w\xE4hlt man ${p.category} f\xFCr die Beschaffung aus?`],
+        [
+          "specification",
+          `Welche technischen Spezifikationen sind bei ${p.category} zu vergleichen?`
+        ],
+        ["commercial", `Was ist bei Mindestbestellmenge und Lieferung f\xFCr ${p.category} zu pr\xFCfen?`]
+      ],
+      zh: [
+        ["supplier", `${p.category}\u6709\u54EA\u4E9B\u53EF\u9009\u4F9B\u5E94\u5546\uFF1F`],
+        ["selection", `\u91C7\u8D2D${p.category}\u5E94\u5982\u4F55\u9009\u578B\uFF1F`],
+        ["specification", `${p.category}\u91C7\u8D2D\u9700\u6BD4\u8F83\u54EA\u4E9B\u6280\u672F\u53C2\u6570\uFF1F`],
+        ["commercial", `\u91C7\u8D2D${p.category}\u65F6\u5982\u4F55\u6838\u5B9E\u8D77\u8BA2\u91CF\u548C\u4EA4\u671F\uFF1F`]
+      ]
+    };
+    const created = [];
+    for (const [intent, question] of templates[language]) {
+      if (s.prompts.some(
+        (x) => x.productId === productId && x.question === question && x.country === country
+      ))
+        continue;
+      const prompt = {
+        id: uid("prompt"),
+        productId,
+        question,
+        language,
+        country,
+        intent,
+        priority: intent === "supplier" ? 90 : 70,
+        priorityBasis: "\u91C7\u8D2D\u610F\u56FE\u4EBA\u5DE5\u89C4\u5219\uFF1B\u4E0D\u662F\u641C\u7D22\u91CF",
+        source: "category-template",
+        factIds: usableFacts(s, productId).map((f) => f.id),
+        version: 1,
+        status: "draft"
+      };
+      s.prompts.push(prompt);
+      created.push(prompt);
+    }
+    event(s, "prompts:generate", productId);
+    return created;
+  }
+  function editPrompt(s, { id, question, approve = false }) {
+    const p = find(s.prompts, id);
+    if (question && question !== p.question) {
+      p.question = text(question, 2e3);
+      p.version++;
+      p.status = "draft";
+    }
+    if (approve) p.status = "approved";
+    event(s, "prompt:update", id);
+    return p;
+  }
+  function createPlan(s, input) {
+    const selected = input.productIds || [input.productId];
+    check(selected.length && selected.length <= 50, "\u8BF7\u9009\u62E9\u5546\u54C1");
+    selected.forEach((id) => find(s.products, id));
+    const prompts = s.prompts.filter(
+      (p2) => selected.includes(p2.productId) && p2.status === "approved" && p2.language === input.language && p2.country === input.country
+    );
+    check(prompts.length, "\u6CA1\u6709\u7B26\u5408\u56FD\u5BB6\u548C\u8BED\u8A00\u7684\u5DF2\u6279\u51C6\u95EE\u9898");
+    check(
+      !prompts.some((p2) => matchingSpan(p2.question, s.workspace.aliases)),
+      "\u5F53\u524D\u53EA\u652F\u6301\u4E2D\u6027\u53D1\u73B0\u95EE\u9898\uFF1B\u95EE\u9898\u4E0D\u80FD\u9884\u5148\u63D0\u793A\u6211\u65B9\u54C1\u724C"
+    );
+    check(["gemini", "openai"].includes(input.provider), "\u5F53\u524D\u4EC5\u652F\u6301 Gemini / OpenAI \u641C\u7D22\u901A\u9053");
+    check([1, 4, 24].includes(Number(input.cadenceHours)), "\u76D1\u6D4B\u9891\u7387\u4E3A 1/4/24 \u5C0F\u65F6");
+    const config = {
+      productIds: selected,
+      prompts: copy(prompts),
+      provider: input.provider,
+      model: text(input.model, 120),
+      country: text(input.country, 2),
+      language: input.language,
+      cadenceHours: Number(input.cadenceHours),
+      dailyCallCap: Number(input.dailyCallCap),
+      dailyBudgetUSD: Number(input.dailyBudgetUSD),
+      reservePerCallUSD: Number(input.reservePerCallUSD),
+      concurrency: 1,
+      retries: 2,
+      search: true,
+      workspace: copy(s.workspace)
+    };
+    check(/^[A-Z]{2}$/.test(config.country), "\u56FD\u5BB6\u987B\u4F7F\u7528\u4E24\u4F4D\u5927\u5199\u4EE3\u7801");
+    check(
+      Number.isInteger(config.dailyCallCap) && config.dailyCallCap > 0 && config.dailyCallCap <= 1e3,
+      "\u6BCF\u65E5\u8C03\u7528\u4E0A\u9650 1\u20131000"
+    );
+    check(
+      config.dailyBudgetUSD > 0 && config.dailyBudgetUSD <= 1e3 && config.reservePerCallUSD > 0 && config.reservePerCallUSD <= config.dailyBudgetUSD,
+      "\u9884\u7B97\u53CA\u6BCF\u6B21\u9884\u7559\u91D1\u989D\u5FC5\u987B\u5927\u4E8E\u96F6"
+    );
+    const p = {
+      id: uid("plan"),
+      name: text(input.name, 120),
+      config,
+      configHash: artifactHash(config),
+      version: 1,
+      status: "paused",
+      createdAt: now(),
+      nextDueAt: now(),
+      lastError: null
+    };
+    s.plans.push(p);
+    event(s, "plan:create", p.id);
+    return p;
+  }
+  function planAction(s, { id, action }) {
+    const p = find(s.plans, id);
+    check(["pause", "resume", "clone"].includes(action), "\u8BA1\u5212\u52A8\u4F5C\u65E0\u6548");
+    if (action === "clone") {
+      const cloned = copy(p);
+      cloned.id = uid("plan");
+      cloned.name += " \xB7 \u526F\u672C";
+      cloned.status = "paused";
+      cloned.createdAt = now();
+      cloned.nextDueAt = now();
+      s.plans.push(cloned);
+      return cloned;
+    }
+    p.status = action === "pause" ? "paused" : "active";
+    p.lastError = null;
+    event(s, "plan:" + action, id);
+    return p;
+  }
+  function matchingSpan(answer, aliases) {
+    for (const alias of aliases) {
+      if (!alias) continue;
+      const escaped = alias.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const re = new RegExp(
+        /[\u3400-\u9fff]/.test(alias) ? escaped : "(?<![\\p{L}\\p{N}])" + escaped + "(?![\\p{L}\\p{N}])",
+        "iu"
+      );
+      const m = re.exec(answer);
+      if (m) return { text: m[0], start: m.index, end: m.index + m[0].length };
+    }
+    return null;
+  }
+  function annotate(answer, citations, workspace, products) {
+    const brandSpan = matchingSpan(answer, workspace.aliases);
+    const productSpan = matchingSpan(
+      answer,
+      products.flatMap((p) => [p.sku, p.name])
+    );
+    const sentences = answer.split(/[.!?。！？\n,;；]+/);
+    const recommendation = sentences.find(
+      (sentence) => workspace.aliases.some((alias) => {
+        const escaped = alias.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        return matchingSpan(sentence, [alias]) && new RegExp(
+          "(?:recommend(?:ed)?|choose|empfehle[n]?|\u63A8\u8350|\u5EFA\u8BAE\u9009\u62E9)\\s+(?:(?:the|using|evaluating|choosing|supplier|brand|considering)\\s+){0,3}" + escaped + "|(?:\u63A8\u8350|\u5EFA\u8BAE\u9009\u62E9)\\s*" + escaped + "|" + escaped + "\\s+(?:(?:is|was|can be)\\s+)?(?:recommended|empfohlen|\u503C\u5F97\u63A8\u8350)",
+          "iu"
+        ).test(sentence);
+      }) && !/not\s+(?:\w+\s+){0,2}recommend|do not|cannot|avoid|nicht|不推荐|不建议/i.test(sentence)
+    );
+    const ownCitations = citations.filter((c) => {
+      try {
+        const u = new URL(c.url);
+        return ["http:", "https:"].includes(u.protocol) && (u.hostname === workspace.domain || u.hostname.endsWith("." + workspace.domain));
+      } catch {
+        return false;
+      }
+    });
+    return {
+      brand: !!brandSpan,
+      product: !!productSpan,
+      recommended: !!brandSpan && !!recommendation,
+      ownCitation: ownCitations.length > 0,
+      brandSpan,
+      productSpan,
+      recommendation: recommendation || null,
+      ownCitations,
+      competitors: workspace.competitors.filter((c) => matchingSpan(answer, [c])),
+      method: "auditable-rule-v1",
+      reviewStatus: "pending"
+    };
+  }
+  function effectiveRuns(s, filter = {}) {
+    const origin = filter.origin || "real";
+    check(["real", "synthetic"].includes(origin), "\u6570\u636E\u6765\u6E90\u7B5B\u9009\u65E0\u6548");
+    const seen = /* @__PURE__ */ new Set();
+    return s.runs.filter((r) => {
+      if (r.origin !== origin || r.status !== "succeeded" || !r.searchPerformed || !r.answer?.trim())
+        return false;
+      if (filter.planId && r.planId !== filter.planId || filter.productId && !r.productIds.includes(filter.productId) || filter.provider && r.provider !== filter.provider || filter.country && r.country !== filter.country || filter.language && r.language !== filter.language || filter.from && r.at < filter.from || filter.to && r.at > filter.to || filter.intent && r.prompt.intent !== filter.intent)
+        return false;
+      if (seen.has(r.id)) return false;
+      seen.add(r.id);
+      return true;
+    });
+  }
+  function metrics(s, filter = {}) {
+    const origin = filter.origin || "real";
+    const relevant = s.runs.filter(
+      (r) => r.origin === origin && (!filter.planId || r.planId === filter.planId) && (!filter.productId || r.productIds.includes(filter.productId)) && (!filter.provider || r.provider === filter.provider) && (!filter.country || r.country === filter.country) && (!filter.language || r.language === filter.language) && (!filter.from || r.at >= filter.from) && (!filter.to || r.at <= filter.to) && (!filter.intent || r.prompt.intent === filter.intent)
+    );
+    const rows = effectiveRuns(s, filter);
+    const N = rows.length, B = rows.filter((r) => r.annotation.brand).length, R = rows.filter((r) => r.annotation.recommended && r.annotation.brand).length, P = rows.filter((r) => r.annotation.product).length, C = rows.filter((r) => r.annotation.ownCitation).length;
+    const rate = (n, d) => d ? n / d : null;
+    return {
+      planned: relevant.length,
+      attempts: relevant.reduce((n, r) => n + r.attempts.length, 0),
+      N,
+      B,
+      R,
+      P,
+      C,
+      brandRate: rate(B, N),
+      recommendationRate: rate(R, B),
+      overallRecommendationRate: rate(R, N),
+      citationRate: rate(C, N),
+      productRate: rate(P, N),
+      reservedUSD: relevant.reduce((n, r) => n + (r.reservedUSD || 0), 0),
+      costLabel: "\u9884\u7B97\u9884\u7559\uFF0C\u975E\u4F9B\u5E94\u5546\u8D26\u5355",
+      failed: relevant.filter((r) => r.status === "failed").length,
+      blocked: relevant.filter((r) => r.status === "blocked").length,
+      competitors: Object.fromEntries(
+        s.workspace.competitors.map((c) => [
+          c,
+          rows.filter((r) => r.annotation.competitors.includes(c)).length
+        ])
+      ),
+      ids: rows.map((r) => r.id)
+    };
+  }
+  function addExample(s) {
+    if (s.runs.some((r) => r.fixture === "prd-100")) return { count: 0 };
+    const product = s.products.find((p) => p.sku === "P-200");
+    check(product, "\u793A\u4F8B\u5546\u54C1 P-200 \u5DF2\u4E0D\u5B58\u5728");
+    const workspace = {
+      brand: "Northstar",
+      aliases: ["Northstar"],
+      domain: "northstar.example",
+      competitors: ["RivalWorks"]
+    };
+    for (let i = 0; i < 100; i++) {
+      const answer = i < 18 ? "I recommend Northstar P-200 for evaluation; verify suitability." : i < 32 ? "Northstar P-200 is mentioned as an option." : "Compare technical evidence from suppliers including RivalWorks.";
+      const citations = i >= 40 && i < 52 ? [{ url: "https://northstar.example/pump", title: "Synthetic fixture source" }] : [];
+      s.runs.push({
+        id: "example-" + i,
+        fixture: "prd-100",
+        origin: "synthetic",
+        at: now(),
+        status: "succeeded",
+        searchPerformed: true,
+        provider: "fixture",
+        model: "synthetic-fixture-v1",
+        country: "US",
+        language: "en",
+        productIds: [product.id],
+        planId: "example-plan",
+        configHash: "fixture-v1",
+        prompt: {
+          id: "example-q",
+          version: 1,
+          question: "Which suppliers offer stainless steel centrifugal pumps?",
+          intent: "supplier"
+        },
+        answer,
+        citations,
+        annotation: annotate(answer, citations, workspace, [product]),
+        attempts: [{ status: "fixture", at: now() }],
+        reservedUSD: 0,
+        raw: { fixture: "Explicitly synthetic; no external API request", index: i }
+      });
+    }
+    event(s, "example:load", "prd-100");
+    return { count: 100 };
+  }
+  function diagnose(s, { runId, productId }) {
+    const run = find(s.runs, runId);
+    check(run.productIds.includes(productId), "\u8BCA\u65AD\u5546\u54C1\u4E0D\u5728\u6837\u672C\u8303\u56F4");
+    check(run.status === "succeeded" && run.searchPerformed, "\u9700\u8981\u6709\u6548\u8054\u7F51\u6837\u672C\u6216\u72EC\u7ACB\u6848\u4F8B\u6837\u672C");
+    const facts = usableFacts(s, productId);
+    check(facts.length, "\u65E0\u5DF2\u5BA1\u6838\u4E8B\u5B9E\u53EF\u7528\u4E8E\u8BCA\u65AD");
+    const components = {
+      impact: run.annotation.recommended ? 2 : 4,
+      intentWeight: run.prompt.intent === "supplier" ? 3 : 2,
+      confidence: 0.5,
+      effort: 2,
+      risk: 1
+    };
+    const d = {
+      id: uid("diag"),
+      runId,
+      productId,
+      origin: run.origin,
+      type: "hypothesis",
+      issue: run.annotation.recommended ? "\u8865\u5145\u53EF\u6838\u9A8C\u7684\u5546\u54C1\u53C2\u6570\u548C\u6765\u6E90" : "\u8BE5\u6837\u672C\u672A\u8BC6\u522B\u5230\u6211\u65B9\u63A8\u8350\uFF1B\u68C0\u67E5\u5546\u54C1\u53C2\u6570\u548C\u91C7\u8D2D\u95EE\u7B54\u7684\u53EF\u9A8C\u8BC1\u6027",
+      explanation: "\u6837\u672C\u8868\u73B0\u662F\u89C2\u5BDF\uFF1B\u5185\u5BB9\u4E0D\u8DB3\u662F\u5426\u5BFC\u81F4\u672A\u63A8\u8350\u5C1A\u672A\u8BC1\u5B9E\u3002\u5F53\u524D\u5EFA\u8BAE\u7531\u672C\u5730\u89C4\u5219\u751F\u6210\u3002",
+      factIds: facts.map((f) => f.id),
+      components,
+      priority: components.impact * components.intentWeight * components.confidence / (components.effort + components.risk),
+      status: "open",
+      at: now()
+    };
+    s.diagnoses.push(d);
+    event(s, "diagnosis:create", d.id);
+    return d;
+  }
+  function factText(f) {
+    return f.attribute + ": " + f.value + (f.unit && !f.value.includes(f.unit) ? " " + f.unit : "") + (f.conditions ? " (" + f.conditions + ")" : "");
+  }
+  function createRevision(s, { diagnosisId }) {
+    const d = find(s.diagnoses, diagnosisId), p = find(s.products, d.productId), facts = usableFacts(s, p.id);
+    check(facts.length, "\u53EF\u7528\u4E8B\u5B9E\u5DF2\u64A4\u56DE");
+    const segments = [
+      {
+        id: "specs",
+        label: "\u53C2\u6570\u6BB5\u843D",
+        before: p.description,
+        after: facts.map(factText).join("\n"),
+        factIds: facts.map((f) => f.id),
+        decision: "pending"
+      },
+      {
+        id: "faq",
+        label: "\u91C7\u8D2D FAQ",
+        before: "",
+        after: "Verified specifications:\n" + facts.map(factText).join("\n") + "\nMOQ, delivery and certification require supplier confirmation.",
+        factIds: facts.map((f) => f.id),
+        decision: "pending"
+      }
+    ];
+    const r = {
+      id: uid("rev"),
+      productId: p.id,
+      diagnosisId: d.id,
+      origin: d.origin,
+      version: s.revisions.filter((r2) => r2.productId === p.id).length + 1,
+      status: "draft",
+      segments,
+      revision: 0,
+      at: now(),
+      generator: "grounded-template-v1",
+      missingTasks: ["\u6838\u5B9E MOQ", "\u6838\u5B9E\u4EA4\u4ED8\u6761\u6B3E", "\u6838\u5B9E\u8BA4\u8BC1\u8BC1\u636E"],
+      approved: null
+    };
+    s.revisions.push(r);
+    event(s, "content:create", r.id);
+    return r;
+  }
+  function editRevision(s, { id, segmentId, after, decision, expectedRevision }) {
+    const r = find(s.revisions, id);
+    check(r.status === "draft", "\u5DF2\u5BA1\u6279\u7248\u672C\u4E0D\u53EF\u7F16\u8F91", 409);
+    check(r.revision === expectedRevision, "\u7248\u672C\u51B2\u7A81\uFF0C\u8BF7\u5237\u65B0", 409);
+    const segment = find(r.segments, segmentId);
+    check(["accept", "reject"].includes(decision), "\u5148\u63A5\u53D7\u6216\u62D2\u7EDD\u7247\u6BB5");
+    check(
+      typeof after === "string" && after.length <= 2e4 && (decision === "reject" || after.trim()),
+      "\u63A5\u53D7\u7247\u6BB5\u4E0D\u80FD\u7A7A\u767D\u6216\u8D85\u8FC7 20000 \u5B57\u7B26"
+    );
+    segment.after = after;
+    segment.decision = decision;
+    segment.reviewedManually = true;
+    r.revision++;
+    event(s, "content:edit", id);
+    return r;
+  }
+  function approveRevision(s, { id, expectedRevision, confirmClaims }) {
+    const r = find(s.revisions, id);
+    check(r.status === "draft" && r.revision === expectedRevision, "\u5BA1\u6279\u72B6\u6001\u6216\u7248\u672C\u51B2\u7A81", 409);
+    check(confirmClaims === true, "\u8BF7\u786E\u8BA4\u4EBA\u5DE5\u6838\u9A8C\u65B0\u589E\u58F0\u660E");
+    check(
+      r.segments.every((x) => x.decision !== "pending"),
+      "\u6BCF\u4E2A\u7247\u6BB5\u90FD\u9700\u63A5\u53D7\u6216\u62D2\u7EDD"
+    );
+    const accepted = r.segments.filter((x) => x.decision === "accept");
+    check(accepted.length, "\u81F3\u5C11\u63A5\u53D7\u4E00\u4E2A\u7247\u6BB5");
+    check(
+      accepted.every(
+        (x) => x.factIds.every((id2) => usableFacts(s, r.productId).some((f) => f.id === id2))
+      ),
+      "\u5F15\u7528\u4E8B\u5B9E\u5DF2\u5931\u6548\uFF0C\u9700\u91CD\u65B0\u751F\u6210"
+    );
+    const artifact = previewRevision(s, id);
+    r.approved = { artifact, hash: artifactHash(artifact), at: now() };
+    r.status = "approved";
+    r.revision++;
+    event(s, "content:approve", id);
+    return r;
+  }
+  function previewRevision(s, id) {
+    const r = find(s.revisions, id), accepted = r.segments.filter((x) => x.decision === "accept");
+    return {
+      product: copy(find(s.products, r.productId)),
+      version: r.version,
+      origin: r.origin,
+      segments: copy(r.segments),
+      missingTasks: copy(r.missingTasks),
+      facts: copy(usableFacts(s, r.productId)),
+      sourceSnapshots: copy(
+        s.sources.filter(
+          (src) => accepted.some(
+            (seg) => seg.factIds.some((id2) => s.facts.find((f) => f.id === id2)?.sourceId === src.id)
+          )
+        )
+      )
+    };
+  }
+  function exportRevision(s, id) {
+    const r = find(s.revisions, id);
+    check(r.status === "approved" && r.approved, "\u5148\u6279\u51C6\u5B8C\u6574\u5185\u5BB9", 409);
+    check(artifactHash(r.approved.artifact) === r.approved.hash, "\u5BA1\u6279\u5FEB\u7167\u6821\u9A8C\u5931\u8D25", 409);
+    return copy({ ...r.approved, revisionId: id });
+  }
+  function rollbackRevision(s, { id }) {
+    const old = find(s.revisions, id);
+    check(old.status === "approved", "\u53EA\u80FD\u4EE5\u6279\u51C6\u7248\u672C\u521B\u5EFA\u56DE\u9000\u8349\u7A3F");
+    const r = copy(old);
+    r.id = uid("rev");
+    r.version = s.revisions.filter((x) => x.productId === old.productId).length + 1;
+    r.status = "draft";
+    r.approved = null;
+    r.revision = 0;
+    r.rollbackOf = id;
+    r.at = now();
+    r.segments.forEach((x) => x.decision = "pending");
+    s.revisions.push(r);
+    return r;
+  }
+  function createExperiment(s, { planId, revisionId, baselineIds, changeAt }) {
+    const plan = find(s.plans, planId);
+    const revision = find(s.revisions, revisionId);
+    check(revision.status === "approved", "\u5148\u6279\u51C6\u5185\u5BB9");
+    check(plan.config.productIds.includes(revision.productId), "\u5185\u5BB9\u5546\u54C1\u4E0D\u5728\u8BA1\u5212\u8303\u56F4");
+    const baseline = effectiveRuns(s, { origin: "real", planId }).filter(
+      (r) => baselineIds.includes(r.id) && r.productIds.includes(revision.productId)
+    );
+    check(baseline.length, "\u9700\u8981\u8BE5\u8BA1\u5212\u7684\u771F\u5B9E\u6709\u6548\u57FA\u7EBF");
+    check(
+      changeAt && !Number.isNaN(Date.parse(changeAt)) && Date.parse(changeAt) <= Date.now(),
+      "\u586B\u5199\u5DF2\u53D1\u751F\u7684\u5185\u5BB9\u4E0A\u7EBF\u65F6\u95F4"
+    );
+    check(
+      baseline.every((r) => r.at < changeAt),
+      "\u57FA\u7EBF\u5FC5\u987B\u65E9\u4E8E\u5185\u5BB9\u4E0A\u7EBF"
+    );
+    const e = {
+      id: uid("exp"),
+      planId,
+      revisionId,
+      productId: revision.productId,
+      contentHash: revision.approved.hash,
+      configHash: plan.configHash,
+      config: copy(plan.config),
+      baselineIds: baseline.map((r) => r.id),
+      changeAt,
+      at: now()
+    };
+    s.experiments.push(e);
+    event(s, "experiment:create", e.id);
+    return e;
+  }
+  function evaluateExperiment(s, id) {
+    const e = find(s.experiments, id);
+    const base = s.runs.filter((r) => e.baselineIds.includes(r.id));
+    const post = effectiveRuns(s, {
+      origin: "real",
+      planId: e.planId,
+      productId: e.productId
+    }).filter((r) => r.at >= e.changeAt);
+    const compatible = (r) => r.configHash === e.configHash && r.model === e.config.model && e.config.prompts.some(
+      (p) => p.id === r.prompt.id && p.version === r.prompt.version && p.question === r.prompt.question
+    );
+    if ([...base, ...post].some((r) => !compatible(r)))
+      return { status: "\u4E0D\u53EF\u6BD4\u8F83", reason: "\u95EE\u9898\u3001\u6A21\u578B\u6216\u91C7\u6837\u914D\u7F6E\u53D1\u751F\u53D8\u5316" };
+    if (new Set([...base, ...post].map((r) => r.providerModel || r.model)).size > 1)
+      return { status: "\u4E0D\u53EF\u6BD4\u8F83", reason: "\u4F9B\u5E94\u5546\u8FD4\u56DE\u7684\u6A21\u578B\u7248\u672C\u53D1\u751F\u53D8\u5316" };
+    const ratio = (rs) => rs.length ? rs.filter((r) => r.annotation.recommended).length / rs.length : null;
+    const citation = (rs) => rs.length ? rs.filter((r) => r.annotation.ownCitation).length / rs.length : null;
+    const low = base.length < 30 || post.length < 30;
+    const delta = post.length ? ratio(post) - ratio(base) : null;
+    const se = delta === null ? null : Math.sqrt(
+      ratio(base) * (1 - ratio(base)) / base.length + ratio(post) * (1 - ratio(post)) / post.length
+    );
+    return {
+      status: low ? "\u6837\u672C\u4E0D\u8DB3" : delta > 0 ? "\u89C2\u5BDF\u5230\u6539\u5584" : delta < 0 ? "\u89C2\u5BDF\u5230\u4E0B\u964D" : "\u672A\u89C2\u5BDF\u5230\u53D8\u5316",
+      baselineN: base.length,
+      postN: post.length,
+      recommendationDelta: delta,
+      citationDelta: post.length ? citation(post) - citation(base) : null,
+      approximate95CI: se === null ? null : [Math.max(-1, delta - 1.96 * se), Math.min(1, delta + 1.96 * se)],
+      limitation: "\u524D\u540E\u89C2\u5BDF\u6BD4\u8F83\uFF0C\u4E0D\u8BC1\u660E\u5185\u5BB9\u4FEE\u6539\u9020\u6210\u63D0\u5347\uFF1B\u533A\u95F4\u4E3A\u72EC\u7ACB\u6837\u672C\u6B63\u6001\u8FD1\u4F3C\uFF0C\u5C0F\u6837\u672C\u4E0D\u53EF\u4F9D\u8D56\u3002"
+    };
+  }
+  function mutate(s, action, input) {
+    const handlers = {
+      workspace: configureWorkspace,
+      import: importProducts,
+      fact: reviewFact,
+      withdraw: withdrawSource,
+      prompts: generatePrompts,
+      prompt: editPrompt,
+      plan: createPlan,
+      "plan-action": planAction,
+      example: addExample,
+      diagnose,
+      content: createRevision,
+      "edit-content": editRevision,
+      "approve-content": approveRevision,
+      rollback: rollbackRevision,
+      experiment: createExperiment
+    };
+    check(handlers[action], "\u64CD\u4F5C\u4E0D\u5B58\u5728", 404);
+    const result = handlers[action](s, input);
+    s.revision++;
+    return result;
+  }
+
+  // src/ui.mjs
+  (async () => {
+    const esc = (value) => String(value ?? "").replace(
+      /[&<>"']/g,
+      (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]
+    );
+    const pct = (value) => value === null ? "\u2014" : (value * 100).toFixed(1) + "%";
+    const name = (id) => state.products.find((p) => p.id === id)?.sku || id;
+    const pretty = (value) => esc(JSON.stringify(value, null, 2));
+    const nav = [
+      ["overview", "\u25C8", "\u589E\u957F\u603B\u89C8"],
+      ["knowledge", "\u25A6", "\u5546\u54C1\u4E0E\u4E8B\u5B9E\u5E93"],
+      ["prompts", "\u224B", "\u91C7\u8D2D\u95EE\u9898\u96C6"],
+      ["plans", "\u25F7", "\u76D1\u6D4B\u8BA1\u5212"],
+      ["data", "\u25A4", "GEO \u6570\u636E\u4E2D\u5FC3"],
+      ["diagnosis", "\u25CE", "\u5DEE\u8DDD\u8BCA\u65AD"],
+      ["content", "\u270E", "\u5185\u5BB9\u5DE5\u4F5C\u53F0"],
+      ["experiments", "\u21C4", "\u590D\u6D4B\u5B9E\u9A8C\u5BA4"]
+    ];
+    let state, providers = [], backend = false, page = "overview", origin = "real", productId = "", selectedRun = "", selectedRevision = "", drawer = "", metricFilter = "", dataFilters = {}, rowsShown = 12, retrievalResult = null, busy = false;
+    const storageKey = "geo-platform-v3";
+    try {
+      state = JSON.parse(localStorage.getItem(storageKey));
+    } catch {
+    }
+    if (state?.schemaVersion !== 3) state = initialState();
+    if (location.protocol === "http:" || location.protocol === "https:") {
+      try {
+        const response = await fetch("/api/state", { signal: AbortSignal.timeout(2e3) });
+        if (response.ok) {
+          const data = await response.json();
+          state = data.state;
+          providers = data.providers;
+          backend = true;
+        }
+      } catch {
+      }
+    }
+    const save = () => {
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(state));
+      } catch {
+        toast("\u6D4F\u89C8\u5668\u5B58\u50A8\u7A7A\u95F4\u4E0D\u8DB3\uFF0C\u8BF7\u4E0B\u8F7D\u5907\u4EFD");
+      }
+    };
+    function toast(message) {
+      const node = document.getElementById("toast");
+      node.textContent = message;
+      node.classList.add("show");
+      setTimeout(() => node.classList.remove("show"), 4500);
+    }
+    async function refresh() {
+      if (backend) {
+        const response = await fetch("/api/state");
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error);
+        state = data.state;
+        providers = data.providers;
+      } else save();
+    }
+    async function act(action, input2 = {}) {
+      if (busy) return;
+      busy = true;
+      try {
+        let result;
+        if (backend) {
+          const response = await fetch("/api/" + action, {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ ...input2, stateRevision: state.revision })
+          });
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error);
+          result = data;
+        } else {
+          if (action === "execute")
+            throw new Error("\u8054\u7F51\u76D1\u6D4B\u9700\u8981\u672C\u5730\u540E\u7AEF\u3002\u5148\u53CC\u51FB start-demo.cmd\uFF0C\u518D\u5728\u672C\u673A\u914D\u7F6E API\u3002");
+          const next = structuredClone(state);
+          result = mutate(next, action, input2);
+          state = next;
+        }
+        await refresh();
+        render();
+        return result;
+      } catch (error) {
+        await refresh().catch(() => {
+        });
+        toast(error.message);
+        return null;
+      } finally {
+        busy = false;
+      }
+    }
+    function currentProduct() {
+      return state.products.find((p) => p.id === productId) || state.products[0];
+    }
+    function scope() {
+      return { origin, ...productId ? { productId } : {} };
+    }
+    function chip(value, kind = "") {
+      return `<span class="chip ${kind}">${esc(value)}</span>`;
+    }
+    function badge(o) {
+      return chip(
+        o === "synthetic" ? "\u6848\u4F8B\u6570\u636E" : o === "public" ? "\u516C\u5F00\u8D44\u6599" : o === "real" ? "\u771F\u5B9E API \u6837\u672C" : "\u7528\u6237\u6388\u6743\u8D44\u6599",
+        o === "synthetic" ? "amber" : "blue"
+      );
+    }
+    function empty(title, body, button = "") {
+      return `<div class="empty"><div class="empty-icon">\u25C7</div><h3>${title}</h3><p>${body}</p>${button}</div>`;
+    }
+    function panel(title, body, extra = "") {
+      return `<section class="panel"><div class="panel-head"><h2>${title}</h2>${extra}</div>${body}</section>`;
+    }
+    function table(headers, rows) {
+      return `<div class="table-wrap"><table><thead><tr>${headers.map((h) => `<th>${h}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div>`;
+    }
+    function btn(label, action, id = "", style = "") {
+      return `<button class="${style}" data-action="${action}" data-id="${esc(id)}">${label}</button>`;
+    }
+    function selectProducts(value = "") {
+      return state.products.map(
+        (p) => `<option value="${esc(p.id)}" ${p.id === value ? "selected" : ""}>${esc(p.sku + " \xB7 " + p.name)}</option>`
+      ).join("");
+    }
+    function field(label, html) {
+      return `<label>${label}${html}</label>`;
+    }
+    function input(key, value = "", type = "text", extra = "") {
+      return `<input name="${key}" type="${type}" value="${esc(value)}" ${extra}>`;
+    }
+    function intro(title, body, extra = "") {
+      return `<div class="page-heading"><div><div class="eyebrow">GEO OPERATIONS / ${VERSION}</div><h1>${title}</h1><p>${body}</p></div><div>${extra}</div></div>`;
+    }
+    function overview() {
+      const m = metrics(state, scope());
+      const cards = [
+        [
+          origin === "synthetic" ? "\u6848\u4F8B\u6709\u6548\u56DE\u7B54 N" : "\u6709\u6548\u8054\u7F51\u56DE\u7B54 N",
+          m.N,
+          "\u53BB\u91CD\u3001\u6210\u529F\u4E14\u5B9E\u9645\u641C\u7D22",
+          "N"
+        ],
+        ["\u54C1\u724C\u63D0\u53CA B", m.B, pct(m.brandRate) + " \xB7 B / N", "B"],
+        ["\u54C1\u724C\u63A8\u8350 R", m.R, pct(m.overallRecommendationRate) + " \xB7 R / N", "R"],
+        ["\u6211\u65B9\u7F51\u5740\u5F15\u7528 C", m.C, pct(m.citationRate) + " \xB7 C / N", "C"]
+      ];
+      return intro(
+        "\u8BA9\u6BCF\u4E00\u6B21 AI \u66DD\u5149\uFF0C\u90FD\u6709\u8BC1\u636E\u53EF\u67E5",
+        "\u4ECE\u53EF\u4FE1\u5546\u54C1\u4E8B\u5B9E\u5F00\u59CB\uFF0C\u6301\u7EED\u76D1\u6D4B\u3001\u8BCA\u65AD\u5E76\u9A8C\u8BC1\u5185\u5BB9\u4FEE\u6539\u3002",
+        btn("\u67E5\u770B\u539F\u59CB\u6837\u672C \u2192", "goto-data", "", "primary")
+      ) + `<div class="stats">${cards.map(([title, value, sub, filter]) => `<button class="stat" data-action="metric" data-id="${filter}"><span>${title}</span><strong>${value}</strong><small>${sub}</small></button>`).join("")}</div><div class="grid two">${panel("\u53EF\u89C1\u5EA6\u6F0F\u6597", `<div class="funnel"><div><b>${m.N}</b><span>\u6709\u6548\u56DE\u7B54</span><i>N</i></div><div><b>${m.B}</b><span>\u63D0\u53CA\u54C1\u724C</span><i>B / N ${pct(m.brandRate)}</i></div><div><b>${m.R}</b><span>\u660E\u786E\u63A8\u8350</span><i>R / B ${pct(m.recommendationRate)}</i></div></div><p class="caption">\u7F51\u5740\u5F15\u7528 ${m.C} \u548C\u5546\u54C1\u63D0\u53CA ${m.P} \u72EC\u7ACB\u7EDF\u8BA1\uFF1B\u5F15\u7528\u53EF\u4EE5\u6CA1\u6709\u54C1\u724C\u63D0\u53CA\u3002</p>`)}
+  ${panel("\u4E0B\u4E00\u6B65\u884C\u52A8", `<ol class="steps"><li><b>\u7EF4\u62A4\u53EF\u4FE1\u5546\u54C1\u4E8B\u5B9E</b><span>${state.products.length} \u4E2A\u5546\u54C1 \xB7 ${state.facts.filter((f) => f.status === "approved").length} \u6761\u5DF2\u5BA1\u6838\u4E8B\u5B9E</span>${btn("\u53BB\u4E8B\u5B9E\u5E93", "goto-knowledge")}</li><li><b>\u6279\u51C6\u91C7\u8D2D\u95EE\u9898</b><span>${state.prompts.filter((p) => p.status === "approved").length} \u6761\u5DF2\u6279\u51C6 \xB7 \u6309\u5E02\u573A\u548C\u8BED\u8A00\u9501\u5B9A\u7248\u672C</span>${btn("\u53BB\u95EE\u9898\u96C6", "goto-prompts")}</li><li><b>\u914D\u7F6E\u8054\u7F51\u76D1\u6D4B</b><span>${providers.filter((p) => p.configured).length} \u4E2A API \u5DF2\u914D\u7F6E \xB7 ${state.plans.length} \u4E2A\u8BA1\u5212</span>${btn("\u53BB\u76D1\u6D4B\u8BA1\u5212", "goto-plans")}</li><li><b>\u5BA1\u6838\u5185\u5BB9\u5E76\u590D\u6D4B</b><span>${state.revisions.filter((r) => r.status === "approved").length} \u4EFD\u5DF2\u6279\u51C6\u4FEE\u6539 \xB7 ${state.experiments.length} \u4E2A\u590D\u6D4B\u5B9E\u9A8C</span>${btn("\u53BB\u5185\u5BB9\u5DE5\u4F5C\u53F0", "goto-content")}</li></ol>`)}</div>` + panel(
+        "\u91C7\u6837\u4E0E\u9884\u7B97",
+        `<div class="inline-stats"><span>\u5DF2\u89C4\u5212\u6837\u672C <b>${m.planned}</b></span><span>\u8BF7\u6C42\u5C1D\u8BD5 <b>${m.attempts}</b></span><span>\u8C03\u7528\u5931\u8D25 <b>${m.failed}</b></span><span>\u5F85\u914D\u7F6E / \u9884\u7B97\u963B\u6B62 <b>${m.blocked}</b></span><span>\u9884\u7B97\u9884\u7559 <b>$${m.reservedUSD.toFixed(3)}</b></span></div><p class="caption">\u9884\u7B97\u9884\u7559\u662F\u672C\u673A\u9884\u7B97\u63A7\u5236\u4F9D\u636E\uFF1B\u5B9E\u9645\u8D39\u7528\u4EE5 API \u4F9B\u5E94\u5546\u8D26\u5355\u4E3A\u51C6\u3002</p>`
+      );
+    }
+    function knowledge() {
+      const p = currentProduct(), facts = state.facts.filter((f) => f.productId === p?.id);
+      return intro(
+        "\u628A\u5546\u54C1\u8D44\u6599\u53D8\u6210\u53EF\u4FE1\u4E8B\u5B9E",
+        "\u6BCF\u6761\u53C2\u6570\u7ED1\u5B9A SKU\u3001\u6765\u6E90\u4E0E\u5BA1\u6838\u72B6\u6001\u3002\u51B2\u7A81\u8D44\u6599\u9700\u8981\u4EBA\u5DE5\u88C1\u5B9A\u3002",
+        btn("\u5BFC\u5165\u5546\u54C1\u8D44\u6599", "import-open", "", "primary")
+      ) + `<div class="grid knowledge-grid">${panel("\u5546\u54C1\u76EE\u5F55", `<div class="product-list">${state.products.map((x) => `<button class="product ${p?.id === x.id ? "selected" : ""}" data-action="select-product" data-id="${esc(x.id)}"><strong>${esc(x.sku)}</strong><span>${esc(x.name)}</span>${badge(x.origin)}<small>${usableFacts(state, x.id).length} \u6761\u53EF\u7528\u4E8B\u5B9E \xB7 ${esc(x.series)}</small></button>`).join("")}</div>`)}
+  <div>${panel(
+        esc(p?.name || "\u5546\u54C1\u4E8B\u5B9E"),
+        facts.length ? table(
+          ["\u5C5E\u6027 / \u6765\u6E90\u5B9A\u4F4D", "\u503C", "\u72B6\u6001", "\u5BA1\u6838"],
+          facts.map(
+            (f) => `<tr><td><b>${esc(f.attribute)}</b><small>${esc(state.sources.find((s) => s.id === f.sourceId)?.name)} \xB7 ${esc(f.locator)}</small></td><td>${esc(f.value)} ${esc(f.unit)}<small>${esc(f.conditions)}</small></td><td>${chip(f.status, f.status === "conflict" ? "amber" : "")}</td><td>${["pending", "conflict"].includes(f.status) ? btn("\u91C7\u7528", "fact-approve", f.id) + btn("\u62D2\u7EDD", "fact-reject", f.id) : ""}</td></tr>`
+          )
+        ) : empty("\u8FD8\u6CA1\u6709\u4E8B\u5B9E", "\u5BFC\u5165\u5546\u54C1\u8868\uFF0C\u6216\u624B\u5DE5\u8865\u5145\u53EF\u6838\u9A8C\u7684\u53C2\u6570\u3002")
+      )}
+  ${panel("\u5546\u54C1\u5185\u68C0\u7D22", `<form id="retrieve-form" class="row"><input name="query" placeholder="\u4F8B\u5982 power / material / pressure" required>${btn("\u68C0\u7D22", "submit-retrieve", "", "primary")}</form><p class="caption">\u5F53\u524D\uFF1ASKU \u7CBE\u786E\u8303\u56F4 + \u5173\u952E\u8BCD\u6392\u5E8F\u3002\u5411\u91CF\u8BED\u4E49\u68C0\u7D22\u5C1A\u672A\u63A5\u5165\u3002</p>${retrievalResult ? `<pre>${pretty(retrievalResult)}</pre>` : ""}`)}
+  ${panel("\u8D44\u6599\u7248\u672C\u4E0E\u64A4\u56DE", state.sources.map((s) => `<div class="source-row"><div><b>${esc(s.name)}</b> ${badge(s.origin)}<small>${esc(s.status)} \xB7 v${s.version} \xB7 SHA ${esc(s.checksum.slice(0, 12))}</small></div>${s.status === "active" ? btn("\u64A4\u56DE\u8D44\u6599", "withdraw", s.id) : chip("\u5DF2\u64A4\u56DE")}</div>`).join(""))}</div></div>`;
+    }
+    function prompts() {
+      const p = currentProduct(), rows = state.prompts.filter((q) => q.productId === p.id);
+      return intro(
+        "\u4ECE\u91C7\u8D2D\u610F\u56FE\u7EC4\u7EC7\u95EE\u9898\u96C6",
+        "\u5019\u9009\u95EE\u9898\u6765\u81EA\u5546\u54C1\u7C7B\u76EE\u6A21\u677F\uFF0C\u4F18\u5148\u7EA7\u662F\u91C7\u8D2D\u89C4\u5219\u8BC4\u5206\uFF1B\u7F16\u8F91\u5E76\u6279\u51C6\u540E\u624D\u8FDB\u5165\u76D1\u6D4B\u3002"
+      ) + panel(
+        "\u751F\u6210\u5019\u9009\u95EE\u9898",
+        `<form id="prompt-form" class="form-grid">${field("\u5546\u54C1", `<select name="productId">${selectProducts(p.id)}</select>`)}${field("\u5E02\u573A", `<select name="country"><option>US</option><option>DE</option><option>GB</option><option>CN</option></select>`)}${field("\u56DE\u7B54\u8BED\u8A00", `<select name="language"><option value="en">English</option><option value="de">Deutsch</option><option value="zh">\u4E2D\u6587</option></select>`)}<button class="primary">\u751F\u6210\u95EE\u9898\u5019\u9009</button></form>`
+      ) + panel(
+        "\u95EE\u9898\u5BA1\u6838",
+        rows.length ? rows.map(
+          (q) => `<form class="prompt-editor" data-prompt="${esc(q.id)}"><div class="row"><b>${esc(q.intent)}</b>${chip(q.country + " / " + q.language)}${chip("v" + q.version)}${chip(q.status)}<span class="muted">\u4F18\u5148\u7EA7 ${q.priority} \xB7 ${esc(q.priorityBasis)}</span></div><textarea name="question" rows="2">${esc(q.question)}</textarea><div class="row"><small>\u6765\u6E90\uFF1A${esc(q.source)} \xB7 \u5173\u8054 ${q.factIds.length} \u6761\u4E8B\u5B9E</small><button class="primary">\u4FDD\u5B58\u5E76\u6279\u51C6</button></div></form>`
+        ).join("") : empty("\u8FD8\u6CA1\u6709\u91C7\u8D2D\u95EE\u9898", "\u9009\u62E9\u5546\u54C1\u548C\u76EE\u6807\u5E02\u573A\uFF0C\u751F\u6210\u540E\u9010\u6761\u68C0\u67E5\u3002")
+      );
+    }
+    function plans() {
+      const p = currentProduct();
+      return intro(
+        "\u5728\u4E00\u81F4\u6761\u4EF6\u4E0B\u6301\u7EED\u91C7\u6837",
+        "\u8BA1\u5212\u4FDD\u5B58\u5B8C\u6574\u95EE\u9898\u7248\u672C\u548C\u54C1\u724C\u914D\u7F6E\u3002\u8FD0\u884C\u65F6\u4E0D\u4F1A\u628A\u79C1\u6709\u5546\u54C1\u4E8B\u5B9E\u52A0\u5165\u76D1\u6D4B\u63D0\u793A\u8BCD\u3002",
+        btn("\u914D\u7F6E API", "settings-open")
+      ) + `<div class="grid two">${panel("\u65B0\u5EFA\u76D1\u6D4B\u8BA1\u5212", `<form id="plan-form" class="form-grid">${field("\u8BA1\u5212\u540D\u79F0", input("name", "\u5DE5\u4E1A\u5546\u54C1\u91C7\u8D2D\u76D1\u6D4B", "text", "required"))}${field("\u5546\u54C1\u8303\u56F4", `<select name="productIds" multiple size="3">${selectProducts(p.id)}</select>`)}${field("API \u901A\u9053", `<select name="provider"><option value="gemini">Gemini \xB7 Google Search</option><option value="openai">OpenAI \xB7 Web search</option></select>`)}${field("\u6A21\u578B ID", input("model", providers.find((x) => x.provider === "gemini")?.model || "", "text", 'placeholder="\u586B\u5165\u8D26\u6237\u53EF\u7528\u7684\u6A21\u578B ID" required'))}${field("\u5E02\u573A", `<select name="country"><option>US</option><option>DE</option><option>GB</option><option>CN</option></select>`)}${field("\u8BED\u8A00", `<select name="language"><option value="en">English</option><option value="de">Deutsch</option><option value="zh">\u4E2D\u6587</option></select>`)}${field("\u91C7\u6837\u9891\u7387", `<select name="cadenceHours"><option value="24">\u6BCF 24 \u5C0F\u65F6</option><option value="4">\u6BCF 4 \u5C0F\u65F6</option><option value="1">\u6BCF 1 \u5C0F\u65F6</option></select>`)}${field("\u6BCF\u65E5\u8BF7\u6C42\u4E0A\u9650\uFF08\u5305\u542B\u91CD\u8BD5\uFF09", input("dailyCallCap", 20, "number", 'min="1" max="1000" required'))}${field("\u6BCF\u65E5\u9884\u7B97\u9884\u7559\u4E0A\u9650 USD", input("dailyBudgetUSD", 2, "number", 'min="0.001" step="0.001" required'))}${field("\u6BCF\u6B21\u8BF7\u6C42\u9884\u7559 USD\uFF08\u4EBA\u5DE5\u8BBE\u5B9A\uFF09", input("reservePerCallUSD", 0.1, "number", 'min="0.001" step="0.001" required'))}<button class="primary">\u521B\u5EFA\u5E76\u51BB\u7ED3\u914D\u7F6E</button></form>`)}
+  ${panel(
+        "\u901A\u9053\u72B6\u6001\u4E0E\u91C7\u6837\u8FB9\u754C",
+        `<div class="provider-list">${["gemini", "openai"].map((id) => {
+          const cap = providers.find((p2) => p2.provider === id);
+          return `<div><b>${id === "gemini" ? "Gemini" : "OpenAI"}</b>${chip(cap?.configured ? "\u5DF2\u914D\u7F6E" : "\u5F85\u914D\u7F6E", cap?.configured ? "green" : "amber")}<small>${esc(cap?.model || "\u6A21\u578B ID \u7531\u672C\u673A\u914D\u7F6E\u6216\u8BA1\u5212\u6307\u5B9A")}</small></div>`;
+        }).join(
+          ""
+        )}</div><p>\u8C03\u5EA6\u5668\u53EA\u5728\u672C\u5730\u540E\u7AEF\u8FD0\u884C\u65F6\u5DE5\u4F5C\uFF0C\u6BCF 15 \u79D2\u68C0\u67E5\u5230\u671F\u8BA1\u5212\u3002\u5355\u961F\u5217\u6267\u884C\uFF0C\u6700\u591A\u91CD\u8BD5 2 \u6B21\uFF1B\u91CD\u8BD5\u4E5F\u5360\u7528\u9884\u7B97\u3002</p><p>Gemini \u7684\u56FD\u5BB6\u53C2\u6570\u662F\u63D0\u793A\u8BCD\u8BED\u5883\uFF0C\u65E0\u6CD5\u4FDD\u8BC1\u8BF7\u6C42\u6765\u81EA\u8BE5\u56FD\u5BB6\u3002API \u91C7\u6837\u7ED3\u679C\u4E0E\u6D88\u8D39\u8005\u7AEF\u641C\u7D22\u4F53\u9A8C\u5206\u522B\u89E3\u91CA\u3002</p><div class="notice">${backend ? "\u672C\u5730\u540E\u7AEF\u5DF2\u8FDE\u63A5" : "\u79BB\u7EBF\u6A21\u5F0F\uFF1A\u53EF\u914D\u7F6E\u8BA1\u5212\uFF0C\u8054\u7F51\u6267\u884C\u9700\u8981\u542F\u52A8\u672C\u5730\u670D\u52A1\u3002"}</div>`
+      )}</div>` + panel(
+        "\u8BA1\u5212\u5217\u8868",
+        state.plans.length ? state.plans.map(
+          (plan) => `<article class="plan-card"><div class="row"><h3>${esc(plan.name)}</h3>${chip(plan.status)}${chip(plan.config.provider)}<small>v${plan.version} \xB7 ${esc(plan.configHash.slice(0, 12))}</small></div><p>${plan.config.productIds.map(name).map(esc).join(", ")} \xB7 ${plan.config.prompts.length} \u4E2A\u95EE\u9898 \xB7 ${esc(plan.config.model)} \xB7 ${esc(plan.config.country)} / ${esc(plan.config.language)} \xB7 \u6BCF ${plan.config.cadenceHours} \u5C0F\u65F6</p><p class="caption">\u4E0B\u6B21\u5230\u671F ${esc(plan.nextDueAt)} ${plan.lastError ? "\xB7 " + esc(plan.lastError) : ""}</p><div class="row">${btn("\u8FD0\u884C\u672C\u8F6E", "execute", plan.id, "primary")}${btn(plan.status === "active" ? "\u6682\u505C" : "\u6062\u590D\u5B9A\u65F6", plan.status === "active" ? "plan-pause" : "plan-resume", plan.id)}${btn("\u514B\u9686\u4E3A\u65B0\u8BA1\u5212", "plan-clone", plan.id)}<details><summary>\u51BB\u7ED3\u914D\u7F6E</summary><pre>${pretty(plan.config)}</pre></details></div></article>`
+        ).join("") : empty("\u6CA1\u6709\u76D1\u6D4B\u8BA1\u5212", "\u5148\u6279\u51C6\u5BF9\u5E94\u5E02\u573A\u7684\u95EE\u9898\uFF0C\u518D\u521B\u5EFA\u76D1\u6D4B\u8BA1\u5212\u3002")
+      );
+    }
+    function dataCenter() {
+      const filter = { ...scope(), ...dataFilters };
+      const m = metrics(state, filter);
+      let rows = state.runs.filter(
+        (r) => r.origin === origin && (!productId || r.productIds.includes(productId))
+      );
+      rows = rows.filter(
+        (r) => (!filter.provider || r.provider === filter.provider) && (!filter.country || r.country === filter.country) && (!filter.language || r.language === filter.language) && (!filter.intent || r.prompt.intent === filter.intent) && (!filter.from || r.at >= filter.from) && (!filter.to || r.at <= filter.to)
+      );
+      if (metricFilter === "N") rows = effectiveRuns(state, filter);
+      else if (metricFilter)
+        rows = rows.filter(
+          (r) => r.annotation?.[{ B: "brand", R: "recommended", C: "ownCitation", P: "product" }[metricFilter]]
+        );
+      return intro(
+        "\u56DE\u5230\u6BCF\u4E00\u6B21\u539F\u59CB\u56DE\u7B54",
+        "\u67E5\u770B\u641C\u7D22\u662F\u5426\u5B9E\u9645\u53D1\u751F\u3001\u5F15\u7528\u51FA\u5904\u3001\u8BC6\u522B\u7247\u6BB5\u3001\u91CD\u8BD5\u4E0E\u9884\u7B97\u8BB0\u5F55\u3002",
+        btn("\u5237\u65B0\u8BB0\u5F55", "refresh")
+      ) + panel(
+        "\u7B5B\u9009\u76D1\u6D4B\u6837\u672C",
+        `<form id="data-filter-form" class="form-grid">${[
+          ["provider", "API \u901A\u9053", ["gemini", "openai", "fixture"]],
+          ["country", "\u56FD\u5BB6", ["US", "DE", "GB", "CN"]],
+          ["language", "\u8BED\u8A00", ["en", "de", "zh"]],
+          ["intent", "\u91C7\u8D2D\u610F\u56FE", ["supplier", "selection", "specification", "commercial"]]
+        ].map(
+          ([key, label, values]) => field(
+            label,
+            `<select name="${key}"><option value="">\u5168\u90E8</option>${values.map((value) => `<option value="${value}" ${dataFilters[key] === value ? "selected" : ""}>${value}</option>`).join("")}</select>`
+          )
+        ).join(
+          ""
+        )}${field("\u5F00\u59CB\u65E5\u671F", input("from", dataFilters.from?.slice(0, 10) || "", "date"))}${field("\u7ED3\u675F\u65E5\u671F", input("to", dataFilters.to?.slice(0, 10) || "", "date"))}<button class="primary">\u5E94\u7528\u7B5B\u9009</button>${btn("\u91CD\u7F6E\u7B5B\u9009", "reset-filters")}</form>`
+      ) + `<div class="mini-stats">${[
+        ["N", m.N],
+        ["B", m.B],
+        ["R", m.R],
+        ["P", m.P],
+        ["C", m.C]
+      ].map(([key, n]) => btn(`${key} \xB7 ${n}`, "metric", key)).join("")} ${btn("\u5168\u90E8\u8BB0\u5F55", "metric")}</div>` + panel(
+        "\u91C7\u6837\u8BB0\u5F55",
+        rows.length ? table(
+          ["\u95EE\u9898 / \u65F6\u95F4", "API / \u6A21\u578B", "\u7ED3\u679C", "\u63D0\u53CA / \u63A8\u8350 / \u5F15\u7528", "\u8BC1\u636E"],
+          rows.slice(0, rowsShown).map(
+            (r) => `<tr><td><b>${esc(r.prompt.question)}</b><small>${esc(r.at)} \xB7 ${esc(r.prompt.intent)}</small></td><td>${esc(r.provider)}<small>${esc(r.model)}</small></td><td>${chip(r.status, r.status === "failed" ? "amber" : "")}<small>${r.origin === "synthetic" ? "\u6848\u4F8B\u641C\u7D22\u6807\u5FD7" : r.searchPerformed ? "\u5DF2\u6267\u884C\u641C\u7D22" : "\u672A\u786E\u8BA4\u641C\u7D22"} \xB7 ${r.attempts.length} \u6B21\u5C1D\u8BD5</small></td><td>${r.annotation ? [
+              r.annotation.brand ? "\u54C1\u724C" : "",
+              r.annotation.recommended ? "\u63A8\u8350" : "",
+              r.annotation.product ? "\u5546\u54C1" : "",
+              r.annotation.ownCitation ? "\u5F15\u7528" : ""
+            ].filter(Boolean).map((x) => chip(x)).join("") || "\u2014" : "\u2014"}</td><td>${btn("\u539F\u59CB\u8BC1\u636E", "evidence", r.id)}</td></tr>`
+          )
+        ) + (rows.length > rowsShown ? btn(`\u67E5\u770B\u66F4\u591A\uFF08${rows.length} \u6761\uFF09`, "more") : "") : empty("\u6CA1\u6709\u8FD9\u4E2A\u8303\u56F4\u7684\u76D1\u6D4B\u8BB0\u5F55", "\u914D\u7F6E API \u540E\u8FD0\u884C\u8BA1\u5212\uFF0C\u6216\u52A0\u8F7D\u72EC\u7ACB\u6848\u4F8B\u67E5\u770B\u5B8C\u6574\u6D41\u7A0B\u3002")
+      ) + panel(
+        "\u6309\u65E5\u91C7\u6837\u4E0E\u7ADE\u54C1\u63D0\u53CA",
+        (() => {
+          const days = [
+            ...new Set(effectiveRuns(state, filter).map((r) => r.at.slice(0, 10)))
+          ].sort();
+          return (days.length ? table(
+            ["\u65E5\u671F", "N", "\u54C1\u724C B", "\u63A8\u8350 R", "\u5F15\u7528 C"],
+            days.map((day) => {
+              const v = metrics(state, {
+                ...filter,
+                from: day + "T00:00:00.000Z",
+                to: day + "T23:59:59.999Z"
+              });
+              return `<tr><td>${day}</td><td>${v.N}</td><td>${v.B}</td><td>${v.R}</td><td>${v.C}</td></tr>`;
+            })
+          ) : "<p>\u8FD9\u4E2A\u8303\u56F4\u6CA1\u6709\u6709\u6548\u6837\u672C\u3002</p>") + `<p class="caption">\u7ADE\u54C1\u63D0\u53CA\u6B21\u6570\uFF08\u540C\u4E00\u56DE\u7B54\u53EF\u63D0\u53CA\u591A\u4E2A\u7ADE\u54C1\uFF09\uFF1A${Object.entries(m.competitors).map(([brand, n]) => esc(brand) + ": " + n).join(" \xB7 ") || "\u5C1A\u672A\u914D\u7F6E\u7ADE\u54C1"}</p>`;
+        })()
+      ) + panel(
+        "\u6307\u6807\u53E3\u5F84",
+        `<p>N = \u6210\u529F\u3001\u975E\u7A7A\u3001\u5B9E\u9645\u6267\u884C\u641C\u7D22\u7684\u552F\u4E00\u56DE\u7B54\u3002B / N = \u54C1\u724C\u63D0\u53CA\u7387\uFF1BR / B = \u5DF2\u63D0\u53CA\u540E\u7684\u63A8\u8350\u7387\uFF1BR / N = \u603B\u63A8\u8350\u7387\uFF1BC / N = \u6211\u65B9\u57DF\u540D\u5F15\u7528\u7387\u3002</p><p>\u54C1\u724C\u8BC6\u522B\u3001\u63A8\u8350\u4E0E\u5F15\u7528\u4F7F\u7528\u53EF\u5BA1\u67E5\u89C4\u5219\uFF0C\u7ED3\u679C\u5F85\u4EBA\u5DE5\u590D\u6838\u3002\u65E0\u641C\u7D22\u3001\u5931\u8D25\u548C\u88AB\u9884\u7B97\u963B\u6B62\u7684\u8BB0\u5F55\u4E0D\u8FDB\u5165 N\u3002\u4E0D\u540C\u6765\u6E90\u6570\u636E\u4E92\u4E0D\u6DF7\u7B97\u3002</p>`
+      );
+    }
+    function diagnosis() {
+      const rows = state.diagnoses.filter(
+        (d) => d.origin === origin && (!productId || d.productId === productId)
+      );
+      return intro(
+        "\u628A\u89C2\u5BDF\u8F6C\u6210\u53EF\u5BA1\u6838\u7684\u884C\u52A8",
+        "\u8BCA\u65AD\u7ED1\u5B9A\u539F\u59CB\u56DE\u7B54\u4E0E\u53EF\u4FE1\u4E8B\u5B9E\u3002\u5185\u5BB9\u7F3A\u53E3\u662F\u5426\u5BFC\u81F4\u66DD\u5149\u4E0D\u8DB3\uFF0C\u9700\u8981\u590D\u6D4B\u68C0\u9A8C\u3002"
+      ) + panel(
+        "\u8BCA\u65AD\u961F\u5217",
+        rows.length ? rows.map(
+          (d) => `<article class="plan-card"><div class="row">${badge(d.origin)}${chip("\u5F85\u9A8C\u8BC1\u5047\u8BBE", "amber")}<b>\u4F18\u5148\u7EA7 ${d.priority.toFixed(2)}</b><span>${esc(name(d.productId))}</span></div><h3>${esc(d.issue)}</h3><p>${esc(d.explanation)}</p><p class="caption">\u4F18\u5148\u7EA7 = \u5F71\u54CD \xD7 \u610F\u56FE\u6743\u91CD \xD7 \u7F6E\u4FE1\u5EA6 /\uFF08\u5DE5\u4F5C\u91CF + \u98CE\u9669\uFF09\u3002\u5206\u9879\uFF1A${esc(JSON.stringify(d.components))}</p><div class="row">${btn("\u67E5\u770B\u6837\u672C", "evidence", d.runId)}${btn("\u751F\u6210\u4E8B\u5B9E\u7EA6\u675F\u4FEE\u6539", "create-content", d.id, "primary")}</div></article>`
+        ).join("") : empty(
+          "\u8FD8\u6CA1\u6709\u8BCA\u65AD",
+          "\u4ECE\u6570\u636E\u4E2D\u5FC3\u6253\u5F00\u4E00\u6761\u6709\u6548\u6837\u672C\uFF0C\u9009\u62E9\u201C\u521B\u5EFA\u8BCA\u65AD\u201D\u3002",
+          btn("\u53BB\u6570\u636E\u4E2D\u5FC3", "goto-data", "", "primary")
+        )
+      );
+    }
+    function content() {
+      const rows = state.revisions.filter(
+        (r2) => r2.origin === origin && (!productId || r2.productId === productId)
+      );
+      const r = rows.find((x) => x.id === selectedRevision) || rows.at(-1);
+      selectedRevision = r?.id || "";
+      return intro(
+        "\u4FEE\u6539\u73B0\u6709\u5185\u5BB9\uFF0C\u4FDD\u7559\u5BA1\u6838\u7248\u672C",
+        "\u9010\u6BB5\u6BD4\u8F83\u4FEE\u6539\u524D\u540E\u3002\u5BFC\u51FA\u7684\u4EA7\u7269\u4E0E\u4EBA\u5DE5\u6279\u51C6\u7684\u5B8C\u6574\u5FEB\u7167\u4E00\u81F4\u3002"
+      ) + `<div class="grid content-grid">${panel(
+        "\u5185\u5BB9\u7248\u672C",
+        rows.length ? rows.slice().reverse().map(
+          (x) => `<button class="product ${r?.id === x.id ? "selected" : ""}" data-action="select-revision" data-id="${esc(x.id)}"><strong>${esc(name(x.productId))} \xB7 v${x.version}</strong>${chip(x.status)}<small>${esc(x.generator)}</small></button>`
+        ).join("") : empty("\u6CA1\u6709\u8349\u7A3F", "\u5148\u4ECE\u6837\u672C\u521B\u5EFA\u8BCA\u65AD\u3002")
+      )}<div>${r ? panel(
+        "\u7247\u6BB5\u4FEE\u6539\u4E0E\u5BA1\u6838",
+        `<div class="row">${badge(r.origin)}${chip(r.status)}${chip("\u7248\u672C " + r.version)}<small>${esc(r.id)}</small></div>${r.segments.map(
+          (seg) => `<form class="segment" data-revision="${esc(r.id)}" data-segment="${esc(seg.id)}"><div class="row"><h3>${esc(seg.label)}</h3>${chip(seg.decision)}</div><div class="diff"><div><small>\u4FEE\u6539\u524D</small><pre>${esc(seg.before || "\uFF08\u5C1A\u65E0\u5185\u5BB9\uFF09")}</pre></div><div><small>\u4FEE\u6539\u540E \xB7 \u53EF\u4EBA\u5DE5\u7F16\u8F91</small><textarea name="after" rows="7" ${r.status === "approved" ? "readonly" : ""}>${esc(seg.after)}</textarea></div></div><p class="caption">\u8BC1\u636E\u4E8B\u5B9E\uFF1A${seg.factIds.map((id) => {
+            const f = state.facts.find((x) => x.id === id);
+            return esc(f ? f.attribute + ": " + f.value : id);
+          }).join(
+            " \xB7 "
+          )}</p>${r.status === "draft" ? `<div class="row"><button name="decision" value="accept" class="primary">\u4FDD\u5B58\u5E76\u63A5\u53D7\u7247\u6BB5</button><button name="decision" value="reject">\u62D2\u7EDD\u7247\u6BB5</button></div>` : ""}</form>`
+        ).join(
+          ""
+        )}<div class="notice">\u5F85\u8865\u6750\u6599\uFF1A${r.missingTasks.map(esc).join("\u3001")}\u3002\u4EBA\u5DE5\u4FEE\u6539\u7684\u4E8B\u5B9E\u58F0\u660E\u9700\u4EBA\u5DE5\u6838\u9A8C\uFF0C\u7CFB\u7EDF\u6CA1\u6709\u81EA\u52A8\u8BC1\u660E\u5176\u771F\u5B9E\u6027\u3002</div>${r.status === "draft" ? `<details open><summary>\u5B8C\u6574\u5F85\u6279\u51C6\u4EA7\u7269\uFF08\u6279\u51C6\u540E\u539F\u6837\u5BFC\u51FA\uFF09</summary><pre>${pretty(previewRevision(state, r.id))}</pre></details><form id="approve-form"><label class="checkbox"><input type="checkbox" name="confirmClaims" required>\u6211\u5DF2\u6838\u9A8C\u4FDD\u7559\u7247\u6BB5\u4E2D\u7684\u4E8B\u5B9E\u58F0\u660E\uFF0C\u5E76\u770B\u8FC7\u5B8C\u6574\u5BFC\u51FA\u5185\u5BB9\u3002</label><button class="primary">\u6279\u51C6\u5B8C\u6574\u5FEB\u7167</button></form>` : `<div class="row">${btn("\u5BFC\u51FA\u6279\u51C6\u4EA7\u7269 JSON", "export", r.id, "primary")}${btn("\u4EE5\u6B64\u7248\u672C\u521B\u5EFA\u56DE\u9000\u8349\u7A3F", "rollback", r.id)}</div><p class="caption">\u5BA1\u6279\u54C8\u5E0C ${esc(r.approved.hash)}</p><details><summary>\u5B8C\u6574\u6279\u51C6\u5FEB\u7167\uFF08\u5BFC\u51FA\u76F8\u540C\u5BF9\u8C61\uFF09</summary><pre>${pretty(r.approved.artifact)}</pre></details>`}`
+      ) : empty(
+        "\u4ECE\u8BCA\u65AD\u5F00\u59CB\u4FEE\u6539",
+        "\u5148\u9009\u62E9\u76D1\u6D4B\u6837\u672C\uFF0C\u518D\u5EFA\u7ACB\u6709\u8BC1\u636E\u7684\u4F18\u5316\u4EFB\u52A1\u3002",
+        btn("\u53BB\u8BCA\u65AD\u961F\u5217", "goto-diagnosis", "", "primary")
+      )}</div></div>`;
+    }
+    function experiments() {
+      const real = effectiveRuns(state, { origin: "real" });
+      return intro(
+        "\u590D\u6D4B\u5185\u5BB9\u4FEE\u6539\u540E\u7684\u8868\u73B0",
+        "\u9501\u5B9A\u95EE\u9898\u3001\u5546\u54C1\u3001\u56FD\u5BB6\u3001\u8BED\u8A00\u3001API \u4E0E\u6A21\u578B\uFF1B\u62A5\u544A\u89C2\u5BDF\u5DEE\u5F02\u548C\u4E0D\u53EF\u6BD4\u8F83\u7684\u539F\u56E0\u3002"
+      ) + panel(
+        "\u5EFA\u7ACB\u590D\u6D4B",
+        real.length ? `<form id="experiment-form" class="form-grid">${field("\u76D1\u6D4B\u8BA1\u5212", `<select name="planId">${state.plans.map((p) => `<option value="${esc(p.id)}">${esc(p.name)}</option>`).join("")}</select>`)}${field(
+          "\u5DF2\u6279\u51C6\u5185\u5BB9\u7248\u672C",
+          `<select name="revisionId">${state.revisions.filter((r) => r.status === "approved").map(
+            (r) => `<option value="${esc(r.id)}">${esc(name(r.productId))} v${r.version}</option>`
+          ).join("")}</select>`
+        )}${field("\u5DF2\u5728\u7AD9\u70B9\u4E0A\u7EBF\u7684\u65F6\u95F4", input("changeAt", "", "datetime-local", "required"))}<p class="caption">\u81EA\u52A8\u9009\u53D6\u8BE5\u8BA1\u5212\u4E2D\u65E9\u4E8E\u4E0A\u7EBF\u65F6\u95F4\u7684\u771F\u5B9E\u6709\u6548\u6837\u672C\u4E3A\u57FA\u7EBF\u3002\u5BFC\u51FA\u4E0D\u7B49\u4E8E\u5DF2\u53D1\u5E03\u3002</p><button class="primary">\u51BB\u7ED3\u57FA\u7EBF\u5E76\u521B\u5EFA\u5B9E\u9A8C</button></form>` : empty(
+          "\u8FD8\u6CA1\u6709\u771F\u5B9E\u57FA\u7EBF",
+          "\u914D\u7F6E API \u5E76\u79EF\u7D2F\u6709\u6548\u6837\u672C\u540E\uFF0C\u624D\u80FD\u5EFA\u7ACB\u771F\u5B9E\u590D\u6D4B\u3002\u6848\u4F8B\u6570\u636E\u4E0D\u80FD\u4F5C\u4E3A\u771F\u5B9E\u63D0\u5347\u7684\u8BC1\u636E\u3002"
+        )
+      ) + panel(
+        "\u590D\u6D4B\u7ED3\u679C",
+        state.experiments.length ? state.experiments.map(
+          (e) => `<article class="plan-card"><h3>${esc(state.plans.find((p) => p.id === e.planId)?.name)}</h3><pre>${pretty(evaluateExperiment(state, e.id))}</pre></article>`
+        ).join("") : empty("\u5C1A\u65E0\u5B9E\u9A8C", "\u5EFA\u8BAE\u6BCF\u9636\u6BB5\u81F3\u5C11 30 \u6761\u6709\u6548\u56DE\u7B54\uFF0C\u5E76\u68C0\u67E5\u95EE\u9898\u548C\u91C7\u6837\u914D\u7F6E\u662F\u5426\u4E00\u81F4\u3002")
+      );
+    }
+    function render() {
+      const title = nav.find((n) => n[0] === page)?.[2];
+      document.getElementById("app").innerHTML = `<aside class="sidebar"><a class="logo" href="#"><span>G</span><div>GEO SIGNAL<small>\u667A\u80FD\u76D1\u6D4B\u4E0E\u4F18\u5316\u5E73\u53F0</small></div></a><div class="workspace"><div class="avatar">${esc(state.workspace.brand[0])}</div><div><b>${esc(state.workspace.brand)}</b><small>${esc(state.workspace.domain)}</small></div></div><div class="nav-label">\u5DE5\u4F5C\u7A7A\u95F4</div><nav>${nav.map(([id, icon, label]) => `<button class="nav ${id === page ? "active" : ""}" data-action="nav" data-id="${id}"><i>${icon}</i>${label}</button>`).join("")}</nav><div class="sidebar-bottom">${btn("\u2699 \u5DE5\u4F5C\u7A7A\u95F4\u4E0E API", "settings-open")}${btn("\u2197 \u6765\u6E90\u4E0E\u6280\u672F\u6587\u6863", "sources-open")}<p>LOCAL WORKSPACE \xB7 V3.0<br>${backend ? "\u540E\u7AEF\u5DF2\u8FDE\u63A5" : "\u6D4F\u89C8\u5668\u79BB\u7EBF\u6A21\u5F0F"}</p></div></aside><main class="main"><header class="topbar"><span>\u5DE5\u4F5C\u7A7A\u95F4 <b>/ ${title}</b></span><div class="row"><span class="connection">\u25CF ${backend ? "\u672C\u5730\u670D\u52A1\u5728\u7EBF" : "\u79BB\u7EBF\u5DE5\u4F5C\u53F0"}</span>${btn("\u52A0\u8F7D\u72EC\u7ACB\u6848\u4F8B", "load-example")}</div></header><div class="scopebar"><label>\u5546\u54C1\u8303\u56F4 <select id="global-product"><option value="">\u5168\u90E8\u5546\u54C1</option>${selectProducts(productId)}</select></label><label>\u76D1\u6D4B\u6570\u636E <select id="global-origin"><option value="real" ${origin === "real" ? "selected" : ""}>\u771F\u5B9E API \u8BB0\u5F55</option><option value="synthetic" ${origin === "synthetic" ? "selected" : ""}>\u72EC\u7ACB\u6848\u4F8B\u6570\u636E</option></select></label>${origin === "synthetic" ? chip("\u6848\u4F8B \xB7 \u4E0D\u4EE3\u8868\u771F\u5B9E\u66DD\u5149", "amber") : chip("\u771F\u5B9E\u6570\u636E \xB7 \u672A\u53D1\u751F\u641C\u7D22\u7684\u8BB0\u5F55\u4E0D\u8BA1\u5165\u6307\u6807", "blue")}</div><div class="page">${{ overview, knowledge, prompts, plans, data: dataCenter, diagnosis, content, experiments }[page]()}</div><footer>\u5546\u54C1\u7EA7 GEO \u8FD0\u8425\u95ED\u73AF \xB7 \u6570\u636E\u4E0E\u6279\u51C6\u7248\u672C\u53EF\u8FFD\u6EAF</footer></main>${renderDrawer()}`;
+      bind();
+      window.__geoReady = true;
+    }
+    function renderDrawer() {
+      let body = "", title = "";
+      if (drawer === "settings") {
+        title = "\u5DE5\u4F5C\u7A7A\u95F4\u4E0E API";
+        body = `<form id="workspace-form" class="stack">${field("\u54C1\u724C", input("brand", state.workspace.brand, "text", "required"))}${field("\u54C1\u724C\u522B\u540D\uFF08\u9017\u53F7\u5206\u9694\uFF09", input("aliases", state.workspace.aliases.join(",")))}${field("\u6211\u65B9\u57DF\u540D", input("domain", state.workspace.domain, "text", "required"))}${field("\u7ADE\u54C1\u540D\u79F0\uFF08\u9017\u53F7\u5206\u9694\uFF09", input("competitors", state.workspace.competitors.join(",")))}${field("\u4F01\u4E1A\u8D44\u6599\u5C5E\u6027", `<select name="provenance"><option value="user-declared">\u6211\u7684\u5B9E\u9645\u4F01\u4E1A\uFF08\u7528\u6237\u58F0\u660E\uFF0C\u672A\u9A8C\u8BC1\u57DF\u540D\u5F52\u5C5E\uFF09</option><option value="synthetic" ${state.workspace.provenance === "synthetic" ? "selected" : ""}>\u865A\u6784\u6848\u4F8B</option></select>`)}<button class="primary">\u4FDD\u5B58\u5DE5\u4F5C\u7A7A\u95F4</button></form><h3>\u5728\u672C\u673A\u540E\u7AEF\u914D\u7F6E API</h3><p>\u5BC6\u94A5\u4E0D\u586B\u5199\u5728\u7F51\u9875\u4E2D\u3002\u8BBE\u7F6E\u73AF\u5883\u53D8\u91CF\u540E\u91CD\u65B0\u542F\u52A8\u670D\u52A1\uFF1A</p><pre>GEMINI_API_KEY=\u4F60\u7684\u672C\u673A\u5BC6\u94A5
+GEMINI_MODEL=\u8D26\u6237\u53EF\u7528\u7684\u6A21\u578B ID
+
+OPENAI_API_KEY=\u4F60\u7684\u672C\u673A\u5BC6\u94A5
+OPENAI_MODEL=\u8D26\u6237\u53EF\u7528\u7684\u6A21\u578B ID</pre><p>\u53EA\u914D\u7F6E\u9700\u8981\u7684\u901A\u9053\u3002\u5DF2\u914D\u7F6E\u4E0D\u8868\u793A\u5DF2\u9A8C\u8BC1\u8054\u7F51\uFF1B\u6210\u529F\u8C03\u7528\u540E\u624D\u80FD\u67E5\u770B\u771F\u5B9E\u8BB0\u5F55\u3002</p><p class="caption">\u5F53\u524D\u662F\u5355\u7528\u6237\u672C\u5730\u5DE5\u4F5C\u7A7A\u95F4\u3002\u591A\u79DF\u6237\u9694\u79BB\u3001\u6B63\u5F0F\u767B\u5F55\u6743\u9650\u4E0E\u4E91\u7AEF\u5E38\u9A7B\u8C03\u5EA6\u5C1A\u672A\u5B9E\u73B0\u3002</p>${btn("\u4E0B\u8F7D\u5DE5\u4F5C\u7A7A\u95F4\u5907\u4EFD", "backup")}`;
+      }
+      if (drawer === "sources") {
+        title = "\u6765\u6E90\u4E0E\u6280\u672F\u6587\u6863";
+        const base = backend ? "/deliverables/" : window.GEO_ASSETS?.docsBase || "";
+        body = `<h3>\u5B98\u65B9\u6280\u672F\u4E0E\u516C\u5F00\u5546\u54C1\u6765\u6E90</h3>${technicalSources.map((s) => `<div class="source-row"><div><a href="${esc(s.url)}" target="_blank" rel="noreferrer">${esc(s.title)} \u2197</a><p>${esc(s.note)}</p></div></div>`).join("")}<h3>\u9879\u76EE\u6587\u6863</h3>${[
+          ["\u4EA7\u54C1\u9700\u6C42\u4E0E\u5B9E\u73B0\u8303\u56F4", "docs/PRD.md"],
+          ["\u67B6\u6784\u4E0E\u6570\u636E\u6D41", "docs/ARCHITECTURE.md"],
+          ["\u6280\u672F\u6765\u6E90\u6838\u5B9E", "docs/RESEARCH.md"],
+          ["\u64CD\u4F5C\u6F14\u793A", "docs/DEMO-SCRIPT.md"],
+          ["\u5B9E\u9645\u6D4B\u8BD5\u62A5\u544A", "evidence/TEST-REPORT.md"]
+        ].map(([label, url]) => `<p><a href="${esc(base + url)}" target="_blank">${label} \u2197</a></p>`).join("")}<p class="caption">\u4EC5\u6536\u5F55\u4EA7\u54C1\u6280\u672F\u548C\u5546\u54C1\u4E8B\u5B9E\u6765\u6E90\u3002</p>`;
+      }
+      if (drawer === "import") {
+        title = "\u5BFC\u5165\u5546\u54C1\u8D44\u6599";
+        body = `<p>CSV / JSON \u652F\u6301\u76F4\u63A5\u5BFC\u5165\u3002XLSX\u3001DOCX\u3001PDF \u901A\u8FC7\u672C\u5730\u540E\u7AEF\u89E3\u6790\uFF1B\u6587\u6863\u539F\u6587\u9700\u8981\u4EBA\u5DE5\u6620\u5C04\u4E3A\u5546\u54C1\u53C2\u6570\u540E\u5BFC\u5165\u3002</p><input id="import-file" type="file" accept=".csv,.json,.xlsx,.docx,.pdf"><form id="import-form" class="stack">${field("\u8D44\u6599\u540D\u79F0", input("name", "\u6211\u7684\u5546\u54C1\u8D44\u6599", "text", "required"))}${field("\u6765\u6E90\u5C5E\u6027", `<select name="origin"><option value="authorized">\u6211\u6709\u6743\u4F7F\u7528\u7684\u4F01\u4E1A\u8D44\u6599</option><option value="public">\u516C\u5F00\u8D44\u6599</option><option value="synthetic">\u6848\u4F8B\u8D44\u6599</option></select>`)}${field("\u51FA\u5904 URL\uFF08\u4EC5\u4FDD\u5B58\u6765\u6E90\uFF0C\u4E0D\u81EA\u52A8\u6293\u53D6\uFF09", input("url", "", "url"))}${field("\u5546\u54C1\u884C JSON \u6216 CSV", `<textarea id="import-rows" name="payload" rows="9" required>${esc("sku,name,category,material,power\nP-300,Sample Pump,centrifugal pump,Stainless steel 304,5 kW")}</textarea>`)}${field("\u6587\u6863\u539F\u6587\u4E0E\u5B9A\u4F4D\uFF08\u53EF\u4EBA\u5DE5\u8865\u5145\uFF09", `<textarea id="import-context" name="context" rows="6" placeholder="\u4E0A\u4F20\u6587\u6863\u540E\u5728\u6B64\u663E\u793A\u9875\u7801\u3001\u6BB5\u843D\u6216\u8868\u683C\u539F\u6587"></textarea>`)}<p class="caption">JSON \u4E3A\u5BF9\u8C61\u6570\u7EC4\uFF1B\u5FC5\u586B sku/name/category\uFF0C\u5176\u4F59\u5B57\u6BB5\u4F5C\u4E3A\u5F85\u5BA1\u4E8B\u5B9E\u3002\u4E0D\u540C\u503C\u51B2\u7A81\u65F6\u4FDD\u7559\u539F\u8BB0\u5F55\u3002PDF \u626B\u63CF\u56FE\u7247\u7684 OCR \u5C1A\u672A\u652F\u6301\u3002</p><button class="primary">\u5BFC\u5165\u5E76\u8FDB\u5165\u4E8B\u5B9E\u5BA1\u6838</button></form>`;
+      }
+      if (drawer === "evidence") {
+        const r = state.runs.find((r2) => r2.id === selectedRun);
+        title = "\u539F\u59CB\u8BC1\u636E";
+        if (r)
+          body = `<div class="row">${badge(r.origin)}${chip(r.status)}${chip(r.origin === "synthetic" ? "\u6848\u4F8B\u641C\u7D22\u6807\u5FD7" : r.searchPerformed ? "\u5DF2\u641C\u7D22" : "\u672A\u786E\u8BA4\u641C\u7D22")}</div><h3>${esc(r.prompt.question)}</h3><pre class="answer">${esc(r.answer || r.error || "\u6CA1\u6709\u56DE\u7B54")}</pre><h3>\u6765\u6E90\u5F15\u7528</h3>${r.citations.map((c) => {
+            let valid = false;
+            try {
+              valid = ["http:", "https:"].includes(new URL(c.url).protocol);
+            } catch {
+            }
+            return `<p>${valid ? `<a href="${esc(c.url)}" target="_blank" rel="noreferrer">${esc(c.title || c.url)} \u2197</a>` : esc(c.url)}<small>\u539F\u59CB\u533A\u95F4 ${esc(c.start ?? "\u2014")}\u2013${esc(c.end ?? "\u2014")}</small></p>`;
+          }).join("") || "<p>\u6CA1\u6709\u5F15\u7528\u6807\u6CE8</p>"}<h3>\u8BC6\u522B\u8BC1\u636E\u4E0E\u5BA1\u6838\u72B6\u6001</h3><pre>${pretty(r.annotation)}</pre><p class="caption">\u89C4\u5219\u8BC6\u522B\u4F9B\u4EBA\u5DE5\u6838\u5BF9\uFF0C\u5C1A\u672A\u5B9E\u73B0\u6279\u91CF\u6807\u6CE8\u7EA0\u9519\u3002\u591A\u8BED\u8A00\u63A8\u8350\u8BC6\u522B\u4ECD\u53EF\u80FD\u6F0F\u5224\u3002</p>${r.status === "succeeded" && r.searchPerformed ? btn("\u57FA\u4E8E\u8FD9\u6761\u6837\u672C\u521B\u5EFA\u8BCA\u65AD", "diagnose", r.id, "primary") : ""}<details><summary>\u8BF7\u6C42\u6458\u8981 / \u91CD\u8BD5 / \u9884\u7B97</summary><pre>${pretty({ request: r.requestSummary || null, attempts: r.attempts, reservedUSD: r.reservedUSD, actualBilledUSD: r.actualBilledUSD ?? null })}</pre></details><details><summary>\u4F9B\u5E94\u5546\u539F\u59CB JSON / \u6848\u4F8B\u6807\u8BC6</summary><pre>${pretty(r.raw || null)}</pre></details>`;
+      }
+      return drawer ? `<div class="overlay"><aside class="drawer" role="dialog" aria-modal="true" aria-label="${title}"><div class="drawer-head"><h2>${title}</h2>${btn("\u5173\u95ED \xD7", "close")}</div>${body}</aside></div>` : "";
+    }
+    function download(value, filename) {
+      const blob = new Blob([JSON.stringify(value, null, 2)], { type: "application/json" }), url = URL.createObjectURL(blob), a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 2e3);
+    }
+    function bind() {
+      document.querySelectorAll("[data-action]").forEach(
+        (button) => button.onclick = async (e) => {
+          const action = button.dataset.action, id = button.dataset.id;
+          if (action.startsWith("goto-")) {
+            page = action.slice(5);
+            drawer = "";
+            render();
+            return;
+          }
+          if (action === "nav") {
+            page = id;
+            drawer = "";
+            metricFilter = "";
+            render();
+            return;
+          }
+          if (action === "close") {
+            drawer = "";
+            render();
+            return;
+          }
+          if (action.endsWith("-open")) {
+            drawer = action.slice(0, -5);
+            render();
+            return;
+          }
+          if (action === "select-product") {
+            productId = id;
+            retrievalResult = null;
+            render();
+            return;
+          }
+          if (action === "select-revision") {
+            selectedRevision = id;
+            render();
+            return;
+          }
+          if (action === "metric") {
+            metricFilter = id;
+            page = "data";
+            rowsShown = 12;
+            render();
+            return;
+          }
+          if (action === "reset-filters") {
+            dataFilters = {};
+            metricFilter = "";
+            render();
+            return;
+          }
+          if (action === "more") {
+            rowsShown += 30;
+            render();
+            return;
+          }
+          if (action === "evidence") {
+            selectedRun = id;
+            drawer = "evidence";
+            render();
+            return;
+          }
+          if (action === "backup") {
+            download(state, "geo-workspace.json");
+            return;
+          }
+          if (action === "export") {
+            try {
+              download(exportRevision(state, id), "approved-content-" + id + ".json");
+              toast("\u5DF2\u5BFC\u51FA\u76F8\u540C\u6279\u51C6\u5FEB\u7167");
+            } catch (error) {
+              toast(error.message);
+            }
+            return;
+          }
+          if (action === "refresh") {
+            await refresh();
+            render();
+            return;
+          }
+          if (action === "load-example") {
+            await act("example");
+            origin = "synthetic";
+            productId = "";
+            page = "overview";
+            render();
+            return;
+          }
+          if (action === "withdraw") {
+            await act("withdraw", { id });
+            return;
+          }
+          if (action.startsWith("fact-")) {
+            await act("fact", { id, decision: action === "fact-approve" ? "approve" : "reject" });
+            return;
+          }
+          if (action.startsWith("plan-")) {
+            await act("plan-action", { id, action: action.slice(5) });
+            return;
+          }
+          if (action === "execute") {
+            button.disabled = true;
+            button.textContent = "\u6B63\u5728\u8BF7\u6C42 API\u2026";
+            await act("execute", { id });
+            await refresh();
+            render();
+            return;
+          }
+          if (action === "diagnose") {
+            const run = state.runs.find((r) => r.id === id);
+            const result = await act("diagnose", { runId: id, productId: run.productIds[0] });
+            if (result) {
+              drawer = "";
+              page = "diagnosis";
+              render();
+            }
+            return;
+          }
+          if (action === "create-content") {
+            const result = await act("content", { diagnosisId: id });
+            if (result) {
+              selectedRevision = result.id;
+              page = "content";
+              render();
+            }
+            return;
+          }
+          if (action === "rollback") {
+            const result = await act("rollback", { id });
+            if (result) selectedRevision = result.id;
+            render();
+          }
+        }
+      );
+      document.getElementById("global-product").onchange = (e) => {
+        productId = e.target.value;
+        retrievalResult = null;
+        render();
+      };
+      document.getElementById("global-origin").onchange = (e) => {
+        origin = e.target.value;
+        render();
+      };
+      const form = (id, callback) => {
+        const f = document.getElementById(id);
+        if (f)
+          f.onsubmit = async (e) => {
+            e.preventDefault();
+            try {
+              await callback(Object.fromEntries(new FormData(f)), f, e);
+            } catch (error) {
+              toast(error.message);
+            }
+          };
+      };
+      form("data-filter-form", (data) => {
+        dataFilters = Object.fromEntries(Object.entries(data).filter(([, v]) => v));
+        if (dataFilters.from) dataFilters.from += "T00:00:00.000Z";
+        if (dataFilters.to) dataFilters.to += "T23:59:59.999Z";
+        metricFilter = "";
+        render();
+      });
+      form("workspace-form", async (data) => {
+        await act("workspace", data);
+        toast("\u54C1\u724C\u914D\u7F6E\u5DF2\u4FDD\u5B58\uFF1B\u65E7\u8BA1\u5212\u7EE7\u7EED\u4F7F\u7528\u539F\u51BB\u7ED3\u914D\u7F6E");
+      });
+      form("import-form", async (data) => {
+        let payload = data.payload.trim(), rows;
+        try {
+          rows = payload.startsWith("[") ? JSON.parse(payload) : null;
+        } catch {
+          throw new Error("\u5546\u54C1 JSON \u683C\u5F0F\u65E0\u6548");
+        }
+        const result = await act("import", {
+          name: data.name,
+          origin: data.origin,
+          url: data.url,
+          context: data.context,
+          ...rows ? { rows } : { csv: payload }
+        });
+        if (result) {
+          drawer = "";
+          page = "knowledge";
+          render();
+        }
+      });
+      form("retrieve-form", (data) => {
+        retrievalResult = retrieve(state, currentProduct().id, data.query);
+        render();
+      });
+      form("prompt-form", async (data) => {
+        await act("prompts", data);
+        productId = data.productId;
+        render();
+      });
+      document.querySelectorAll("[data-prompt]").forEach(
+        (f) => f.onsubmit = async (e) => {
+          e.preventDefault();
+          await act("prompt", {
+            id: f.dataset.prompt,
+            question: new FormData(f).get("question"),
+            approve: true
+          });
+        }
+      );
+      form("plan-form", async (data, f) => {
+        data.productIds = [...f.elements.productIds.selectedOptions].map((x) => x.value);
+        await act("plan", data);
+      });
+      document.querySelectorAll(".segment").forEach(
+        (f) => f.onsubmit = async (e) => {
+          e.preventDefault();
+          const r = state.revisions.find((r2) => r2.id === f.dataset.revision);
+          await act("edit-content", {
+            id: r.id,
+            segmentId: f.dataset.segment,
+            after: new FormData(f).get("after"),
+            decision: e.submitter.value,
+            expectedRevision: r.revision
+          });
+        }
+      );
+      form("approve-form", async (data) => {
+        const r = state.revisions.find((r2) => r2.id === selectedRevision);
+        await act("approve-content", {
+          id: r.id,
+          expectedRevision: r.revision,
+          confirmClaims: data.confirmClaims === "on"
+        });
+      });
+      form("experiment-form", async (data) => {
+        const changeAt = new Date(data.changeAt).toISOString();
+        await act("experiment", {
+          ...data,
+          changeAt,
+          baselineIds: effectiveRuns(state, { origin: "real", planId: data.planId }).filter((r) => r.at < changeAt).map((r) => r.id)
+        });
+      });
+      const file = document.getElementById("import-file");
+      if (file)
+        file.onchange = async () => {
+          const f = file.files[0];
+          if (!f) return;
+          try {
+            if (f.size > 5 * 1024 * 1024) throw new Error("\u6587\u4EF6\u4E0D\u80FD\u8D85\u8FC7 5 MB");
+            if (/\.(csv|json)$/i.test(f.name)) {
+              document.getElementById("import-rows").value = await f.text();
+              return;
+            }
+            if (!backend) throw new Error("\u6587\u6863\u89E3\u6790\u9700\u8981\u672C\u5730\u540E\u7AEF\uFF1B\u79BB\u7EBF\u53EF\u4F7F\u7528 CSV/JSON");
+            const bytes = new Uint8Array(await f.arrayBuffer());
+            let binary = "";
+            for (const byte of bytes) binary += String.fromCharCode(byte);
+            const response = await fetch("/api/extract", {
+              method: "POST",
+              headers: { "content-type": "application/json" },
+              body: JSON.stringify({ name: f.name, base64: btoa(binary) })
+            });
+            const extracted = await response.json();
+            if (!response.ok) throw new Error(extracted.error);
+            document.getElementById("import-context").value = extracted.text + "\nfile-sha256:" + extracted.fileChecksum;
+            if (extracted.rows)
+              document.getElementById("import-rows").value = JSON.stringify(extracted.rows, null, 2);
+            else {
+              document.getElementById("import-rows").value = "";
+              toast("\u5DF2\u62BD\u53D6\u539F\u6587\uFF1B\u8BF7\u6309 SKU \u4EBA\u5DE5\u586B\u5199\u5546\u54C1 JSON \u6216 CSV\uFF0C\u518D\u5BFC\u5165\u3002");
+            }
+          } catch (error) {
+            toast(error.message);
+          }
+        };
+    }
+    render();
+  })();
+})();
+</script></body></html>

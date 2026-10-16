@@ -1,0 +1,130 @@
+{
+  "product": {
+    "id": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+    "sku": "P-200",
+    "name": "304 不锈钢离心泵",
+    "category": "stainless steel centrifugal pump",
+    "series": "泵系列",
+    "brand": "Northstar",
+    "origin": "synthetic",
+    "description": ""
+  },
+  "version": 1,
+  "origin": "synthetic",
+  "segments": [
+    {
+      "id": "specs",
+      "label": "参数段落",
+      "before": "",
+      "after": "material: Stainless steel 304\nflow: 20 m³/h\npower: 3 kW\nCheck suitability against these specifications.",
+      "factIds": [
+        "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+        "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+        "fact-271a4202-8d09-402c-9649-80fac1497692"
+      ],
+      "decision": "accept",
+      "reviewedManually": true
+    },
+    {
+      "id": "faq",
+      "label": "采购 FAQ",
+      "before": "",
+      "after": "Verified specifications:\nmaterial: Stainless steel 304\nflow: 20 m³/h\npower: 3 kW\nMOQ, delivery and certification require supplier confirmation.",
+      "factIds": [
+        "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+        "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+        "fact-271a4202-8d09-402c-9649-80fac1497692"
+      ],
+      "decision": "reject",
+      "reviewedManually": true
+    }
+  ],
+  "missingTasks": [
+    "核实 MOQ",
+    "核实交付条款",
+    "核实认证证据"
+  ],
+  "facts": [
+    {
+      "id": "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "attribute": "material",
+      "value": "Stainless steel 304",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+      "locator": "row:2/material",
+      "originalText": "material: Stainless steel 304",
+      "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:24:34.821Z",
+      "reviewedAt": "2026-10-16T14:24:34.821Z"
+    },
+    {
+      "id": "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "attribute": "flow",
+      "value": "20 m³/h",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+      "locator": "row:2/flow",
+      "originalText": "flow: 20 m³/h",
+      "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:24:34.821Z",
+      "reviewedAt": "2026-10-16T14:24:34.821Z"
+    },
+    {
+      "id": "fact-271a4202-8d09-402c-9649-80fac1497692",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "attribute": "power",
+      "value": "3 kW",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+      "locator": "row:2/power",
+      "originalText": "power: 3 kW",
+      "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:24:34.821Z",
+      "reviewedAt": "2026-10-16T14:24:34.821Z"
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "id": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+      "name": "内置工业商品案例",
+      "origin": "synthetic",
+      "url": null,
+      "checksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+      "contextChecksum": null,
+      "status": "active",
+      "version": 1,
+      "at": "2026-10-16T14:24:34.819Z",
+      "context": [
+        {
+          "sku": "P-200",
+          "name": "304 不锈钢离心泵",
+          "category": "stainless steel centrifugal pump",
+          "series": "泵系列",
+          "material": "Stainless steel 304",
+          "flow": "20 m³/h",
+          "power": "3 kW"
+        },
+        {
+          "sku": "V-100",
+          "name": "不锈钢球阀",
+          "category": "industrial ball valve",
+          "series": "阀系列",
+          "material": "Stainless steel 304",
+          "size": "DN25",
+          "pressure": "PN16"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6355 @@
+{
+  "schemaVersion": 3,
+  "revision": 16,
+  "workspace": {
+    "brand": "Northstar",
+    "aliases": [
+      "Northstar"
+    ],
+    "domain": "northstar.example",
+    "competitors": [
+      "RivalWorks"
+    ],
+    "provenance": "synthetic"
+  },
+  "products": [
+    {
+      "id": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "sku": "P-200",
+      "name": "304 不锈钢离心泵",
+      "category": "stainless steel centrifugal pump",
+      "series": "泵系列",
+      "brand": "Northstar",
+      "origin": "synthetic",
+      "description": ""
+    },
+    {
+      "id": "prod-2de242c9-6979-40e5-92ae-579dbe713a6d",
+      "sku": "V-100",
+      "name": "不锈钢球阀",
+      "category": "industrial ball valve",
+      "series": "阀系列",
+      "brand": "Northstar",
+      "origin": "synthetic",
+      "description": ""
+    },
+    {
+      "id": "prod-85d4e933-f9aa-4a03-9768-fc47efdabc89",
+      "sku": "PI5",
+      "name": "Raspberry Pi 5",
+      "category": "single-board computer",
+      "series": "single-board computer",
+      "brand": "Raspberry Pi",
+      "origin": "public",
+      "description": ""
+    },
+    {
+      "id": "prod-23b2c59a-67ba-4d2b-b746-22fb3e964e3d",
+      "sku": "NEW-1",
+      "name": "Fixture Pump",
+      "category": "pump",
+      "series": "pump",
+      "brand": "Northstar",
+      "origin": "synthetic",
+      "description": ""
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+      "name": "内置工业商品案例",
+      "origin": "synthetic",
+      "url": null,
+      "checksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+      "contextChecksum": null,
+      "status": "active",
+      "version": 1,
+      "at": "2026-10-16T14:24:34.819Z",
+      "context": [
+        {
+          "sku": "P-200",
+          "name": "304 不锈钢离心泵",
+          "category": "stainless steel centrifugal pump",
+          "series": "泵系列",
+          "material": "Stainless steel 304",
+          "flow": "20 m³/h",
+          "power": "3 kW"
+        },
+        {
+          "sku": "V-100",
+          "name": "不锈钢球阀",
+          "category": "industrial ball valve",
+          "series": "阀系列",
+          "material": "Stainless steel 304",
+          "size": "DN25",
+          "pressure": "PN16"
+        }
+      ]
+    },
+    {
+      "id": "src-9c38db1f-1369-4250-9d6a-04d3bef0ba1f",
+      "name": "Raspberry Pi 5 官方规格摘录",
+      "origin": "public",
+      "url": "https://www.raspberrypi.com/products/raspberry-pi-5/",
+      "checksum": "6213f69ff0be9a6692235d72a1d438f91b0d24db4fed73a7b4715cf0361552a5",
+      "contextChecksum": null,
+      "status": "active",
+      "version": 1,
+      "at": "2026-10-16T14:24:34.821Z",
+      "context": [
+        {
+          "sku": "PI5",
+          "name": "Raspberry Pi 5",
+          "category": "single-board computer",
+          "brand": "Raspberry Pi",
+          "processor": "Broadcom BCM2712, 2.4GHz quad-core Arm Cortex-A76",
+          "power": "5V/5A DC via USB-C"
+        }
+      ]
+    },
+    {
+      "id": "src-d07715ee-5ec8-479a-8ddc-86dc8a081c6e",
+      "name": "Browser synthetic import fixture",
+      "origin": "synthetic",
+      "url": null,
+      "checksum": "af21b04f5e09ba4b002dd1ace0a5561216847adcf8e11dacf0d2948406476693",
+      "contextChecksum": null,
+      "status": "active",
+      "version": 1,
+      "at": "2026-10-16T14:56:50.459Z",
+      "context": [
+        {
+          "sku": "NEW-1",
+          "name": "Fixture Pump",
+          "category": "pump",
+          "material": "Steel",
+          "power": "9 kW"
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "attribute": "material",
+      "value": "Stainless steel 304",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+      "locator": "row:2/material",
+      "originalText": "material: Stainless steel 304",
+      "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:24:34.821Z",
+      "reviewedAt": "2026-10-16T14:24:34.821Z"
+    },
+    {
+      "id": "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "attribute": "flow",
+      "value": "20 m³/h",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+      "locator": "row:2/flow",
+      "originalText": "flow: 20 m³/h",
+      "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:24:34.821Z",
+      "reviewedAt": "2026-10-16T14:24:34.821Z"
+    },
+    {
+      "id": "fact-271a4202-8d09-402c-9649-80fac1497692",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "attribute": "power",
+      "value": "3 kW",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+      "locator": "row:2/power",
+      "originalText": "power: 3 kW",
+      "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:24:34.821Z",
+      "reviewedAt": "2026-10-16T14:24:34.821Z"
+    },
+    {
+      "id": "fact-a5c86b84-a388-4e34-92dd-a99a4d153e58",
+      "productId": "prod-2de242c9-6979-40e5-92ae-579dbe713a6d",
+      "attribute": "material",
+      "value": "Stainless steel 304",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+      "locator": "row:3/material",
+      "originalText": "material: Stainless steel 304",
+      "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:24:34.821Z",
+      "reviewedAt": "2026-10-16T14:24:34.821Z"
+    },
+    {
+      "id": "fact-b271dae9-1cf4-44a6-b752-b81753b9cb04",
+      "productId": "prod-2de242c9-6979-40e5-92ae-579dbe713a6d",
+      "attribute": "size",
+      "value": "DN25",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+      "locator": "row:3/size",
+      "originalText": "size: DN25",
+      "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:24:34.821Z",
+      "reviewedAt": "2026-10-16T14:24:34.821Z"
+    },
+    {
+      "id": "fact-b81c15d0-cf3c-4474-b5b6-06b24c2aaa44",
+      "productId": "prod-2de242c9-6979-40e5-92ae-579dbe713a6d",
+      "attribute": "pressure",
+      "value": "PN16",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+      "locator": "row:3/pressure",
+      "originalText": "pressure: PN16",
+      "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:24:34.821Z",
+      "reviewedAt": "2026-10-16T14:24:34.821Z"
+    },
+    {
+      "id": "fact-d9e256c4-0d11-4def-83fc-1734e5a4c499",
+      "productId": "prod-85d4e933-f9aa-4a03-9768-fc47efdabc89",
+      "attribute": "processor",
+      "value": "Broadcom BCM2712, 2.4GHz quad-core Arm Cortex-A76",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-9c38db1f-1369-4250-9d6a-04d3bef0ba1f",
+      "locator": "row:2/processor",
+      "originalText": "processor: Broadcom BCM2712, 2.4GHz quad-core Arm Cortex-A76",
+      "sourceChecksum": "6213f69ff0be9a6692235d72a1d438f91b0d24db4fed73a7b4715cf0361552a5",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:24:34.821Z",
+      "reviewedAt": "2026-10-16T14:24:34.821Z"
+    },
+    {
+      "id": "fact-6d113293-598e-4966-9426-47c0aa383336",
+      "productId": "prod-85d4e933-f9aa-4a03-9768-fc47efdabc89",
+      "attribute": "power",
+      "value": "5V/5A DC via USB-C",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-9c38db1f-1369-4250-9d6a-04d3bef0ba1f",
+      "locator": "row:2/power",
+      "originalText": "power: 5V/5A DC via USB-C",
+      "sourceChecksum": "6213f69ff0be9a6692235d72a1d438f91b0d24db4fed73a7b4715cf0361552a5",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:24:34.821Z",
+      "reviewedAt": "2026-10-16T14:24:34.821Z"
+    },
+    {
+      "id": "fact-24930132-e64a-442e-b27d-90c9301a7188",
+      "productId": "prod-23b2c59a-67ba-4d2b-b746-22fb3e964e3d",
+      "attribute": "material",
+      "value": "Steel",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-d07715ee-5ec8-479a-8ddc-86dc8a081c6e",
+      "locator": "row:2/material",
+      "originalText": "material: Steel",
+      "sourceChecksum": "af21b04f5e09ba4b002dd1ace0a5561216847adcf8e11dacf0d2948406476693",
+      "version": 1,
+      "status": "approved",
+      "at": "2026-10-16T14:56:50.459Z",
+      "reviewedAt": "2026-10-16T14:57:23.356Z"
+    },
+    {
+      "id": "fact-de6b83dd-a00d-4471-b6cf-5e07fb9855a4",
+      "productId": "prod-23b2c59a-67ba-4d2b-b746-22fb3e964e3d",
+      "attribute": "power",
+      "value": "9 kW",
+      "unit": "",
+      "conditions": "",
+      "sourceId": "src-d07715ee-5ec8-479a-8ddc-86dc8a081c6e",
+      "locator": "row:2/power",
+      "originalText": "power: 9 kW",
+      "sourceChecksum": "af21b04f5e09ba4b002dd1ace0a5561216847adcf8e11dacf0d2948406476693",
+      "version": 1,
+      "status": "pending",
+      "at": "2026-10-16T14:56:50.459Z"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "prompt-f69763c3-3c74-4bdb-9df5-492223d59cca",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "question": "Which suppliers offer stainless steel centrifugal pump for industrial procurement?",
+      "language": "en",
+      "country": "US",
+      "intent": "supplier",
+      "priority": 90,
+      "priorityBasis": "采购意图人工规则；不是搜索量",
+      "source": "category-template",
+      "factIds": [
+        "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+        "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+        "fact-271a4202-8d09-402c-9649-80fac1497692"
+      ],
+      "version": 1,
+      "status": "approved"
+    },
+    {
+      "id": "prompt-dfeee258-2ac9-46bf-8fba-036809aa1d3c",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "question": "How should a buyer select a stainless steel centrifugal pump?",
+      "language": "en",
+      "country": "US",
+      "intent": "selection",
+      "priority": 70,
+      "priorityBasis": "采购意图人工规则；不是搜索量",
+      "source": "category-template",
+      "factIds": [
+        "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+        "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+        "fact-271a4202-8d09-402c-9649-80fac1497692"
+      ],
+      "version": 1,
+      "status": "approved"
+    },
+    {
+      "id": "prompt-60dab1c5-8351-4866-810f-0d9a03e668eb",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "question": "What technical specifications should I compare for stainless steel centrifugal pump?",
+      "language": "en",
+      "country": "US",
+      "intent": "specification",
+      "priority": 70,
+      "priorityBasis": "采购意图人工规则；不是搜索量",
+      "source": "category-template",
+      "factIds": [
+        "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+        "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+        "fact-271a4202-8d09-402c-9649-80fac1497692"
+      ],
+      "version": 1,
+      "status": "approved"
+    },
+    {
+      "id": "prompt-71945dc8-e1d3-44e6-acce-a87bc3d6dd0a",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "question": "What should I verify about MOQ and delivery when sourcing stainless steel centrifugal pump?",
+      "language": "en",
+      "country": "US",
+      "intent": "commercial",
+      "priority": 70,
+      "priorityBasis": "采购意图人工规则；不是搜索量",
+      "source": "category-template",
+      "factIds": [
+        "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+        "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+        "fact-271a4202-8d09-402c-9649-80fac1497692"
+      ],
+      "version": 1,
+      "status": "approved"
+    }
+  ],
+  "plans": [
+    {
+      "id": "plan-7e1350c3-439b-489b-9580-e51ef3d15815",
+      "name": "工业商品采购监测",
+      "config": {
+        "productIds": [
+          "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+        ],
+        "prompts": [
+          {
+            "id": "prompt-f69763c3-3c74-4bdb-9df5-492223d59cca",
+            "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+            "question": "Which suppliers offer stainless steel centrifugal pump for industrial procurement?",
+            "language": "en",
+            "country": "US",
+            "intent": "supplier",
+            "priority": 90,
+            "priorityBasis": "采购意图人工规则；不是搜索量",
+            "source": "category-template",
+            "factIds": [
+              "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+              "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+              "fact-271a4202-8d09-402c-9649-80fac1497692"
+            ],
+            "version": 1,
+            "status": "approved"
+          },
+          {
+            "id": "prompt-dfeee258-2ac9-46bf-8fba-036809aa1d3c",
+            "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+            "question": "How should a buyer select a stainless steel centrifugal pump?",
+            "language": "en",
+            "country": "US",
+            "intent": "selection",
+            "priority": 70,
+            "priorityBasis": "采购意图人工规则；不是搜索量",
+            "source": "category-template",
+            "factIds": [
+              "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+              "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+              "fact-271a4202-8d09-402c-9649-80fac1497692"
+            ],
+            "version": 1,
+            "status": "approved"
+          },
+          {
+            "id": "prompt-60dab1c5-8351-4866-810f-0d9a03e668eb",
+            "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+            "question": "What technical specifications should I compare for stainless steel centrifugal pump?",
+            "language": "en",
+            "country": "US",
+            "intent": "specification",
+            "priority": 70,
+            "priorityBasis": "采购意图人工规则；不是搜索量",
+            "source": "category-template",
+            "factIds": [
+              "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+              "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+              "fact-271a4202-8d09-402c-9649-80fac1497692"
+            ],
+            "version": 1,
+            "status": "approved"
+          },
+          {
+            "id": "prompt-71945dc8-e1d3-44e6-acce-a87bc3d6dd0a",
+            "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+            "question": "What should I verify about MOQ and delivery when sourcing stainless steel centrifugal pump?",
+            "language": "en",
+            "country": "US",
+            "intent": "commercial",
+            "priority": 70,
+            "priorityBasis": "采购意图人工规则；不是搜索量",
+            "source": "category-template",
+            "factIds": [
+              "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+              "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+              "fact-271a4202-8d09-402c-9649-80fac1497692"
+            ],
+            "version": 1,
+            "status": "approved"
+          }
+        ],
+        "provider": "gemini",
+        "model": "test-model",
+        "country": "US",
+        "language": "en",
+        "cadenceHours": 24,
+        "dailyCallCap": 20,
+        "dailyBudgetUSD": 2,
+        "reservePerCallUSD": 0.1,
+        "concurrency": 1,
+        "retries": 2,
+        "search": true,
+        "workspace": {
+          "brand": "Northstar",
+          "aliases": [
+            "Northstar"
+          ],
+          "domain": "northstar.example",
+          "competitors": [
+            "RivalWorks"
+          ],
+          "provenance": "synthetic"
+        }
+      },
+      "configHash": "3798fc5f4cff18ca0f7fb0468d87f8865f5c6b6f026899443fb541edcd69e663",
+      "version": 1,
+      "status": "paused",
+      "createdAt": "2026-10-16T14:55:30.951Z",
+      "nextDueAt": "2026-10-17T14:55:31.258Z",
+      "lastError": "API 未配置",
+      "lastRunAt": "2026-10-16T14:55:31.236Z"
+    }
+  ],
+  "runs": [
+    {
+      "id": "example-0",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.934Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.936Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 0
+      }
+    },
+    {
+      "id": "example-1",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.936Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.937Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 1
+      }
+    },
+    {
+      "id": "example-2",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.937Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.937Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 2
+      }
+    },
+    {
+      "id": "example-3",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.937Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.937Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 3
+      }
+    },
+    {
+      "id": "example-4",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.937Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.937Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 4
+      }
+    },
+    {
+      "id": "example-5",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.937Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 5
+      }
+    },
+    {
+      "id": "example-6",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 6
+      }
+    },
+    {
+      "id": "example-7",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 7
+      }
+    },
+    {
+      "id": "example-8",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 8
+      }
+    },
+    {
+      "id": "example-9",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 9
+      }
+    },
+    {
+      "id": "example-10",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 10
+      }
+    },
+    {
+      "id": "example-11",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 11
+      }
+    },
+    {
+      "id": "example-12",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 12
+      }
+    },
+    {
+      "id": "example-13",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 13
+      }
+    },
+    {
+      "id": "example-14",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 14
+      }
+    },
+    {
+      "id": "example-15",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 15
+      }
+    },
+    {
+      "id": "example-16",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 16
+      }
+    },
+    {
+      "id": "example-17",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "I recommend Northstar P-200 for evaluation; verify suitability.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": true,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 12,
+          "end": 21
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 22,
+          "end": 27
+        },
+        "recommendation": "I recommend Northstar P-200 for evaluation",
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 17
+      }
+    },
+    {
+      "id": "example-18",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 18
+      }
+    },
+    {
+      "id": "example-19",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 19
+      }
+    },
+    {
+      "id": "example-20",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 20
+      }
+    },
+    {
+      "id": "example-21",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 21
+      }
+    },
+    {
+      "id": "example-22",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 22
+      }
+    },
+    {
+      "id": "example-23",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 23
+      }
+    },
+    {
+      "id": "example-24",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 24
+      }
+    },
+    {
+      "id": "example-25",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 25
+      }
+    },
+    {
+      "id": "example-26",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 26
+      }
+    },
+    {
+      "id": "example-27",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 27
+      }
+    },
+    {
+      "id": "example-28",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 28
+      }
+    },
+    {
+      "id": "example-29",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 29
+      }
+    },
+    {
+      "id": "example-30",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 30
+      }
+    },
+    {
+      "id": "example-31",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Northstar P-200 is mentioned as an option.",
+      "citations": [],
+      "annotation": {
+        "brand": true,
+        "product": true,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": {
+          "text": "Northstar",
+          "start": 0,
+          "end": 9
+        },
+        "productSpan": {
+          "text": "P-200",
+          "start": 10,
+          "end": 15
+        },
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 31
+      }
+    },
+    {
+      "id": "example-32",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.938Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 32
+      }
+    },
+    {
+      "id": "example-33",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.938Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 33
+      }
+    },
+    {
+      "id": "example-34",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 34
+      }
+    },
+    {
+      "id": "example-35",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 35
+      }
+    },
+    {
+      "id": "example-36",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 36
+      }
+    },
+    {
+      "id": "example-37",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 37
+      }
+    },
+    {
+      "id": "example-38",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 38
+      }
+    },
+    {
+      "id": "example-39",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 39
+      }
+    },
+    {
+      "id": "example-40",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 40
+      }
+    },
+    {
+      "id": "example-41",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 41
+      }
+    },
+    {
+      "id": "example-42",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 42
+      }
+    },
+    {
+      "id": "example-43",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 43
+      }
+    },
+    {
+      "id": "example-44",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 44
+      }
+    },
+    {
+      "id": "example-45",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 45
+      }
+    },
+    {
+      "id": "example-46",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 46
+      }
+    },
+    {
+      "id": "example-47",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 47
+      }
+    },
+    {
+      "id": "example-48",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 48
+      }
+    },
+    {
+      "id": "example-49",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 49
+      }
+    },
+    {
+      "id": "example-50",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 50
+      }
+    },
+    {
+      "id": "example-51",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [
+        {
+          "url": "https://northstar.example/pump",
+          "title": "Synthetic fixture source"
+        }
+      ],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": true,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [
+          {
+            "url": "https://northstar.example/pump",
+            "title": "Synthetic fixture source"
+          }
+        ],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 51
+      }
+    },
+    {
+      "id": "example-52",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 52
+      }
+    },
+    {
+      "id": "example-53",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 53
+      }
+    },
+    {
+      "id": "example-54",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 54
+      }
+    },
+    {
+      "id": "example-55",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 55
+      }
+    },
+    {
+      "id": "example-56",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 56
+      }
+    },
+    {
+      "id": "example-57",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 57
+      }
+    },
+    {
+      "id": "example-58",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 58
+      }
+    },
+    {
+      "id": "example-59",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 59
+      }
+    },
+    {
+      "id": "example-60",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 60
+      }
+    },
+    {
+      "id": "example-61",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 61
+      }
+    },
+    {
+      "id": "example-62",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 62
+      }
+    },
+    {
+      "id": "example-63",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 63
+      }
+    },
+    {
+      "id": "example-64",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 64
+      }
+    },
+    {
+      "id": "example-65",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 65
+      }
+    },
+    {
+      "id": "example-66",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 66
+      }
+    },
+    {
+      "id": "example-67",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 67
+      }
+    },
+    {
+      "id": "example-68",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 68
+      }
+    },
+    {
+      "id": "example-69",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 69
+      }
+    },
+    {
+      "id": "example-70",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 70
+      }
+    },
+    {
+      "id": "example-71",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 71
+      }
+    },
+    {
+      "id": "example-72",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 72
+      }
+    },
+    {
+      "id": "example-73",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 73
+      }
+    },
+    {
+      "id": "example-74",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 74
+      }
+    },
+    {
+      "id": "example-75",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 75
+      }
+    },
+    {
+      "id": "example-76",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 76
+      }
+    },
+    {
+      "id": "example-77",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 77
+      }
+    },
+    {
+      "id": "example-78",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 78
+      }
+    },
+    {
+      "id": "example-79",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 79
+      }
+    },
+    {
+      "id": "example-80",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 80
+      }
+    },
+    {
+      "id": "example-81",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 81
+      }
+    },
+    {
+      "id": "example-82",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 82
+      }
+    },
+    {
+      "id": "example-83",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 83
+      }
+    },
+    {
+      "id": "example-84",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 84
+      }
+    },
+    {
+      "id": "example-85",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 85
+      }
+    },
+    {
+      "id": "example-86",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 86
+      }
+    },
+    {
+      "id": "example-87",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 87
+      }
+    },
+    {
+      "id": "example-88",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 88
+      }
+    },
+    {
+      "id": "example-89",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 89
+      }
+    },
+    {
+      "id": "example-90",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 90
+      }
+    },
+    {
+      "id": "example-91",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 91
+      }
+    },
+    {
+      "id": "example-92",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 92
+      }
+    },
+    {
+      "id": "example-93",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 93
+      }
+    },
+    {
+      "id": "example-94",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 94
+      }
+    },
+    {
+      "id": "example-95",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 95
+      }
+    },
+    {
+      "id": "example-96",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 96
+      }
+    },
+    {
+      "id": "example-97",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 97
+      }
+    },
+    {
+      "id": "example-98",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 98
+      }
+    },
+    {
+      "id": "example-99",
+      "fixture": "prd-100",
+      "origin": "synthetic",
+      "at": "2026-10-16T14:25:18.939Z",
+      "status": "succeeded",
+      "searchPerformed": true,
+      "provider": "fixture",
+      "model": "synthetic-fixture-v1",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "planId": "example-plan",
+      "configHash": "fixture-v1",
+      "prompt": {
+        "id": "example-q",
+        "version": 1,
+        "question": "Which suppliers offer stainless steel centrifugal pumps?",
+        "intent": "supplier"
+      },
+      "answer": "Compare technical evidence from suppliers including RivalWorks.",
+      "citations": [],
+      "annotation": {
+        "brand": false,
+        "product": false,
+        "recommended": false,
+        "ownCitation": false,
+        "brandSpan": null,
+        "productSpan": null,
+        "recommendation": null,
+        "ownCitations": [],
+        "competitors": [
+          "RivalWorks"
+        ],
+        "method": "auditable-rule-v1",
+        "reviewStatus": "pending"
+      },
+      "attempts": [
+        {
+          "status": "fixture",
+          "at": "2026-10-16T14:25:18.939Z"
+        }
+      ],
+      "reservedUSD": 0,
+      "raw": {
+        "fixture": "Explicitly synthetic; no external API request",
+        "index": 99
+      }
+    },
+    {
+      "id": "5013618ffece915d7cebcfb3fa0906a758a778309d6cb1109be469cc97271b39",
+      "origin": "real",
+      "at": "2026-10-16T14:55:31.236Z",
+      "planId": "plan-7e1350c3-439b-489b-9580-e51ef3d15815",
+      "planVersion": 1,
+      "configHash": "3798fc5f4cff18ca0f7fb0468d87f8865f5c6b6f026899443fb541edcd69e663",
+      "provider": "gemini",
+      "model": "test-model",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "prompt": {
+        "id": "prompt-f69763c3-3c74-4bdb-9df5-492223d59cca",
+        "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+        "question": "Which suppliers offer stainless steel centrifugal pump for industrial procurement?",
+        "language": "en",
+        "country": "US",
+        "intent": "supplier",
+        "priority": 90,
+        "priorityBasis": "采购意图人工规则；不是搜索量",
+        "source": "category-template",
+        "factIds": [
+          "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+          "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+          "fact-271a4202-8d09-402c-9649-80fac1497692"
+        ],
+        "version": 1,
+        "status": "approved"
+      },
+      "status": "blocked",
+      "answer": "",
+      "citations": [],
+      "searchPerformed": false,
+      "attempts": [],
+      "reservedUSD": 0,
+      "annotation": null,
+      "actualBilledUSD": null,
+      "error": "API 未配置"
+    },
+    {
+      "id": "9a02d7ea83d16f25726908acbdfe511b0018c77b6a8c7cfab0adb225d34b8e08",
+      "origin": "real",
+      "at": "2026-10-16T14:55:31.236Z",
+      "planId": "plan-7e1350c3-439b-489b-9580-e51ef3d15815",
+      "planVersion": 1,
+      "configHash": "3798fc5f4cff18ca0f7fb0468d87f8865f5c6b6f026899443fb541edcd69e663",
+      "provider": "gemini",
+      "model": "test-model",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "prompt": {
+        "id": "prompt-dfeee258-2ac9-46bf-8fba-036809aa1d3c",
+        "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+        "question": "How should a buyer select a stainless steel centrifugal pump?",
+        "language": "en",
+        "country": "US",
+        "intent": "selection",
+        "priority": 70,
+        "priorityBasis": "采购意图人工规则；不是搜索量",
+        "source": "category-template",
+        "factIds": [
+          "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+          "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+          "fact-271a4202-8d09-402c-9649-80fac1497692"
+        ],
+        "version": 1,
+        "status": "approved"
+      },
+      "status": "blocked",
+      "answer": "",
+      "citations": [],
+      "searchPerformed": false,
+      "attempts": [],
+      "reservedUSD": 0,
+      "annotation": null,
+      "actualBilledUSD": null,
+      "error": "API 未配置"
+    },
+    {
+      "id": "6ec8078908ee072adc5b9dd6c6d969512677d5fdff520ca1701ae2c4b14625ca",
+      "origin": "real",
+      "at": "2026-10-16T14:55:31.236Z",
+      "planId": "plan-7e1350c3-439b-489b-9580-e51ef3d15815",
+      "planVersion": 1,
+      "configHash": "3798fc5f4cff18ca0f7fb0468d87f8865f5c6b6f026899443fb541edcd69e663",
+      "provider": "gemini",
+      "model": "test-model",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "prompt": {
+        "id": "prompt-60dab1c5-8351-4866-810f-0d9a03e668eb",
+        "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+        "question": "What technical specifications should I compare for stainless steel centrifugal pump?",
+        "language": "en",
+        "country": "US",
+        "intent": "specification",
+        "priority": 70,
+        "priorityBasis": "采购意图人工规则；不是搜索量",
+        "source": "category-template",
+        "factIds": [
+          "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+          "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+          "fact-271a4202-8d09-402c-9649-80fac1497692"
+        ],
+        "version": 1,
+        "status": "approved"
+      },
+      "status": "blocked",
+      "answer": "",
+      "citations": [],
+      "searchPerformed": false,
+      "attempts": [],
+      "reservedUSD": 0,
+      "annotation": null,
+      "actualBilledUSD": null,
+      "error": "API 未配置"
+    },
+    {
+      "id": "1ae7268b4ea14c631c677f09f929a9236017f967605f7ed096f4d7205d16e6cd",
+      "origin": "real",
+      "at": "2026-10-16T14:55:31.236Z",
+      "planId": "plan-7e1350c3-439b-489b-9580-e51ef3d15815",
+      "planVersion": 1,
+      "configHash": "3798fc5f4cff18ca0f7fb0468d87f8865f5c6b6f026899443fb541edcd69e663",
+      "provider": "gemini",
+      "model": "test-model",
+      "country": "US",
+      "language": "en",
+      "productIds": [
+        "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+      ],
+      "prompt": {
+        "id": "prompt-71945dc8-e1d3-44e6-acce-a87bc3d6dd0a",
+        "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+        "question": "What should I verify about MOQ and delivery when sourcing stainless steel centrifugal pump?",
+        "language": "en",
+        "country": "US",
+        "intent": "commercial",
+        "priority": 70,
+        "priorityBasis": "采购意图人工规则；不是搜索量",
+        "source": "category-template",
+        "factIds": [
+          "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+          "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+          "fact-271a4202-8d09-402c-9649-80fac1497692"
+        ],
+        "version": 1,
+        "status": "approved"
+      },
+      "status": "blocked",
+      "answer": "",
+      "citations": [],
+      "searchPerformed": false,
+      "attempts": [],
+      "reservedUSD": 0,
+      "annotation": null,
+      "actualBilledUSD": null,
+      "error": "API 未配置"
+    }
+  ],
+  "diagnoses": [
+    {
+      "id": "diag-6d027bca-d4a9-4e5f-8703-e47e99b34f51",
+      "runId": "example-40",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "origin": "synthetic",
+      "type": "hypothesis",
+      "issue": "该样本未识别到我方推荐；检查商品参数和采购问答的可验证性",
+      "explanation": "样本表现是观察；内容不足是否导致未推荐尚未证实。当前建议由本地规则生成。",
+      "factIds": [
+        "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+        "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+        "fact-271a4202-8d09-402c-9649-80fac1497692"
+      ],
+      "components": {
+        "impact": 4,
+        "intentWeight": 3,
+        "confidence": 0.5,
+        "effort": 2,
+        "risk": 1
+      },
+      "priority": 2,
+      "status": "open",
+      "at": "2026-10-16T14:25:54.183Z"
+    }
+  ],
+  "revisions": [
+    {
+      "id": "rev-cf6b8eb7-8451-4555-b107-be3dbacd22d3",
+      "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+      "diagnosisId": "diag-6d027bca-d4a9-4e5f-8703-e47e99b34f51",
+      "origin": "synthetic",
+      "version": 1,
+      "status": "approved",
+      "segments": [
+        {
+          "id": "specs",
+          "label": "参数段落",
+          "before": "",
+          "after": "material: Stainless steel 304\nflow: 20 m³/h\npower: 3 kW\nCheck suitability against these specifications.",
+          "factIds": [
+            "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+            "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+            "fact-271a4202-8d09-402c-9649-80fac1497692"
+          ],
+          "decision": "accept",
+          "reviewedManually": true
+        },
+        {
+          "id": "faq",
+          "label": "采购 FAQ",
+          "before": "",
+          "after": "Verified specifications:\nmaterial: Stainless steel 304\nflow: 20 m³/h\npower: 3 kW\nMOQ, delivery and certification require supplier confirmation.",
+          "factIds": [
+            "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+            "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+            "fact-271a4202-8d09-402c-9649-80fac1497692"
+          ],
+          "decision": "reject",
+          "reviewedManually": true
+        }
+      ],
+      "revision": 3,
+      "at": "2026-10-16T14:26:08.138Z",
+      "generator": "grounded-template-v1",
+      "missingTasks": [
+        "核实 MOQ",
+        "核实交付条款",
+        "核实认证证据"
+      ],
+      "approved": {
+        "artifact": {
+          "product": {
+            "id": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+            "sku": "P-200",
+            "name": "304 不锈钢离心泵",
+            "category": "stainless steel centrifugal pump",
+            "series": "泵系列",
+            "brand": "Northstar",
+            "origin": "synthetic",
+            "description": ""
+          },
+          "version": 1,
+          "origin": "synthetic",
+          "segments": [
+            {
+              "id": "specs",
+              "label": "参数段落",
+              "before": "",
+              "after": "material: Stainless steel 304\nflow: 20 m³/h\npower: 3 kW\nCheck suitability against these specifications.",
+              "factIds": [
+                "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+                "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+                "fact-271a4202-8d09-402c-9649-80fac1497692"
+              ],
+              "decision": "accept",
+              "reviewedManually": true
+            },
+            {
+              "id": "faq",
+              "label": "采购 FAQ",
+              "before": "",
+              "after": "Verified specifications:\nmaterial: Stainless steel 304\nflow: 20 m³/h\npower: 3 kW\nMOQ, delivery and certification require supplier confirmation.",
+              "factIds": [
+                "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+                "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+                "fact-271a4202-8d09-402c-9649-80fac1497692"
+              ],
+              "decision": "reject",
+              "reviewedManually": true
+            }
+          ],
+          "missingTasks": [
+            "核实 MOQ",
+            "核实交付条款",
+            "核实认证证据"
+          ],
+          "facts": [
+            {
+              "id": "fact-45a190a2-d34b-4075-ac6c-34d30a06512c",
+              "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+              "attribute": "material",
+              "value": "Stainless steel 304",
+              "unit": "",
+              "conditions": "",
+              "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+              "locator": "row:2/material",
+              "originalText": "material: Stainless steel 304",
+              "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+              "version": 1,
+              "status": "approved",
+              "at": "2026-10-16T14:24:34.821Z",
+              "reviewedAt": "2026-10-16T14:24:34.821Z"
+            },
+            {
+              "id": "fact-0570f5f9-8d63-4570-9d50-b372d7eb86fa",
+              "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+              "attribute": "flow",
+              "value": "20 m³/h",
+              "unit": "",
+              "conditions": "",
+              "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+              "locator": "row:2/flow",
+              "originalText": "flow: 20 m³/h",
+              "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+              "version": 1,
+              "status": "approved",
+              "at": "2026-10-16T14:24:34.821Z",
+              "reviewedAt": "2026-10-16T14:24:34.821Z"
+            },
+            {
+              "id": "fact-271a4202-8d09-402c-9649-80fac1497692",
+              "productId": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127",
+              "attribute": "power",
+              "value": "3 kW",
+              "unit": "",
+              "conditions": "",
+              "sourceId": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+              "locator": "row:2/power",
+              "originalText": "power: 3 kW",
+              "sourceChecksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+              "version": 1,
+              "status": "approved",
+              "at": "2026-10-16T14:24:34.821Z",
+              "reviewedAt": "2026-10-16T14:24:34.821Z"
+            }
+          ],
+          "sourceSnapshots": [
+            {
+              "id": "src-94bcf3a1-315e-4399-b1de-5b02e54ca5f8",
+              "name": "内置工业商品案例",
+              "origin": "synthetic",
+              "url": null,
+              "checksum": "4613489642abe3127cc13e01a29b33f7c7c898ae0251e70eb0c2adb28cea04d3",
+              "contextChecksum": null,
+              "status": "active",
+              "version": 1,
+              "at": "2026-10-16T14:24:34.819Z",
+              "context": [
+                {
+                  "sku": "P-200",
+                  "name": "304 不锈钢离心泵",
+                  "category": "stainless steel centrifugal pump",
+                  "series": "泵系列",
+                  "material": "Stainless steel 304",
+                  "flow": "20 m³/h",
+                  "power": "3 kW"
+                },
+                {
+                  "sku": "V-100",
+                  "name": "不锈钢球阀",
+                  "category": "industrial ball valve",
+                  "series": "阀系列",
+                  "material": "Stainless steel 304",
+                  "size": "DN25",
+                  "pressure": "PN16"
+                }
+              ]
+            }
+          ]
+        },
+        "hash": "f8b700c5ccd97df5d8480836d67d20fee8e0cff09671e375b29900f45fee5cdd",
+        "at": "2026-10-16T14:26:50.931Z"
+      }
+    }
+  ],
+  "experiments": [],
+  "events": [
+    {
+      "id": "evt-563cd8aa-427d-4d7e-8582-5ad311f22526",
+      "at": "2026-10-16T14:25:18.939Z",
+      "action": "example:load",
+      "entity": "prd-100"
+    },
+    {
+      "id": "evt-8f4dd646-6a12-4085-9c93-471c50b42284",
+      "at": "2026-10-16T14:25:54.183Z",
+      "action": "diagnosis:create",
+      "entity": "diag-6d027bca-d4a9-4e5f-8703-e47e99b34f51"
+    },
+    {
+      "id": "evt-79c5201b-6921-42e4-92d2-45d012705cc1",
+      "at": "2026-10-16T14:26:08.138Z",
+      "action": "content:create",
+      "entity": "rev-cf6b8eb7-8451-4555-b107-be3dbacd22d3"
+    },
+    {
+      "id": "evt-ad56a3bd-4bbc-4001-b762-7d2f684cb6cb",
+      "at": "2026-10-16T14:26:32.766Z",
+      "action": "content:edit",
+      "entity": "rev-cf6b8eb7-8451-4555-b107-be3dbacd22d3"
+    },
+    {
+      "id": "evt-1d035321-394c-42f1-b0cc-17f44ddf7eed",
+      "at": "2026-10-16T14:26:50.318Z",
+      "action": "content:edit",
+      "entity": "rev-cf6b8eb7-8451-4555-b107-be3dbacd22d3"
+    },
+    {
+      "id": "evt-1ac90631-a8a3-4692-8292-c97c3c38d494",
+      "at": "2026-10-16T14:26:50.931Z",
+      "action": "content:approve",
+      "entity": "rev-cf6b8eb7-8451-4555-b107-be3dbacd22d3"
+    },
+    {
+      "id": "evt-1e12bac8-d305-4d81-9e93-63835c724a01",
+      "at": "2026-10-16T14:55:01.469Z",
+      "action": "prompts:generate",
+      "entity": "prod-d61a7211-ca59-4945-9b85-3dbe71c72127"
+    },
+    {
+      "id": "evt-4bdb3d50-d16d-4217-ab87-bef7c250d619",
+      "at": "2026-10-16T14:55:16.133Z",
+      "action": "prompt:update",
+      "entity": "prompt-f69763c3-3c74-4bdb-9df5-492223d59cca"
+    },
+    {
+      "id": "evt-70095f75-b170-4cc5-b960-0c893f3f6174",
+      "at": "2026-10-16T14:55:16.402Z",
+      "action": "prompt:update",
+      "entity": "prompt-dfeee258-2ac9-46bf-8fba-036809aa1d3c"
+    },
+    {
+      "id": "evt-b1d812fe-6248-4332-9355-a700d3edcfa5",
+      "at": "2026-10-16T14:55:16.662Z",
+      "action": "prompt:update",
+      "entity": "prompt-60dab1c5-8351-4866-810f-0d9a03e668eb"
+    },
+    {
+      "id": "evt-558ddcfb-2944-4005-a257-cdc56c3950c1",
+      "at": "2026-10-16T14:55:16.928Z",
+      "action": "prompt:update",
+      "entity": "prompt-71945dc8-e1d3-44e6-acce-a87bc3d6dd0a"
+    },
+    {
+      "id": "evt-22874beb-c990-4422-b4cc-99fffd45a733",
+      "at": "2026-10-16T14:55:30.951Z",
+      "action": "plan:create",
+      "entity": "plan-7e1350c3-439b-489b-9580-e51ef3d15815"
+    },
+    {
+      "id": "evt-bd59bc8a-71c6-4237-9948-e76daa39ee77",
+      "at": "2026-10-16T14:56:50.459Z",
+      "action": "import",
+      "entity": "src-d07715ee-5ec8-479a-8ddc-86dc8a081c6e"
+    },
+    {
+      "id": "evt-ab83aaa0-fb12-4d6a-94f6-1fe7c9f0c526",
+      "at": "2026-10-16T14:57:23.356Z",
+      "action": "fact:approve",
+      "entity": "fact-24930132-e64a-442e-b27d-90c9301a7188"
+    }
+  ]
+}

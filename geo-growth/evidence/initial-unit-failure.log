@@ -1,0 +1,85 @@
+✖ HTTP state, transactional import, persistence and stale-write 409 (81.9492ms)
+✔ HTTP cross-site writes, bad content type, unknown routes and runtime file access are rejected (42.3318ms)
+✔ HTTP export identity and immutable approval gate (46.6932ms)
+✖ backend health exposes flags, no keys, real blocked runs persist (22.7711ms)
+✔ uploaded CSV uses actual Python extraction without network (145.5584ms)
+✔ restart marks in-flight records interrupted without silently retrying (22.8192ms)
+✔ capabilities never expose credentials (1.4459ms)
+✔ monitor request excludes private facts, SKU, brand and workspace evidence (10.3387ms)
+✔ Gemini parser retains search steps and citation offsets (0.3815ms)
+✔ OpenAI requires completed search, text alone is not network evidence (0.2281ms)
+✔ Gemini REST transport contract and returned secrets are redacted (26.357ms)
+✔ OpenAI REST contract selects web_search and no storage (2.9937ms)
+✔ missing API blocks with zero attempts and cannot produce fake success (1.7401ms)
+✔ 429 retry stores two attempts for one effective answer and charges budget reservations (8.3631ms)
+✔ logical idempotency does not execute same prompt twice in same cycle (3.5886ms)
+✔ daily cap includes retries; budget exhaustion pauses and excludes incomplete results (1.3865ms)
+✔ HTTP 401 is not retried and cannot leak raw provider errors (1.6026ms)
+✔ successful response with no search is retained but excluded from N (2.2087ms)
+✔ configuration tampering is rejected before any API request (1.1039ms)
+✔ plan lifecycle pause, resume, clone preserves immutable configuration (0.7475ms)
+✔ transport timeout and malformed JSON are actual error paths, no synthetic fallback (1.5515ms)
+✔ PRD fixture: N100/B32/R18/C12 and citation outside brand funnel (15.1561ms)
+✔ effective denominator excludes failure, no search, blank, duplicate and other origin (1.8909ms)
+✔ filters apply to denominator and request accounting (2.2773ms)
+✔ CSV supports quoted comma, escaped quotes, multiline and BOM (0.5303ms)
+✔ imported facts retain provenance, require review and do not mix SKU (1.4004ms)
+✔ conflicting values stay visible until explicit review supersedes old value (0.6537ms)
+✔ withdrawn source is excluded from new retrieval and content (3.5124ms)
+✔ prompt edit increments version, old plan snapshot does not change (1.5868ms)
+✔ plan requires approved prompts for exact locale and positive budget (0.7499ms)
+✔ recommendation has to refer to own brand, negative and competing recommendation do not count (2.7644ms)
+✔ own citation checks hostname, excludes deceptive suffix and javascript (0.2075ms)
+✔ diagnosis stays a hypothesis bound to a raw run and facts, bad SKU rejected (1.3738ms)
+✔ approval equals complete preview; export never rebuilds from current catalogue (2.9858ms)
+✔ draft approval gate, segment decision, manual edits and optimistic conflict (1.996ms)
+✔ approved hash detects tampering and rollback creates new pending version (2.8946ms)
+✔ source withdrawn after draft blocks approval (2.1606ms)
+✔ experiment rejects synthetic-only baseline instead of reporting fake uplift (1.9342ms)
+✔ experiment reports small N and incompatible sampling, no causal attribution (3.3056ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 37
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 514.0576
+
+✖ failing tests:
+
+test at tests\api.test.mjs:32:1
+✖ HTTP state, transactional import, persistence and stale-write 409 (81.9492ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  500 !== 201
+  
+      at TestContext.<anonymous> (file:///C:/Users/73789/Documents/Codex/2026-10-15/referenced-chatgpt-conversation-this-is-an/outputs/geo-growth/tests/api.test.mjs:41:10)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 500,
+    expected: 201,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\api.test.mjs:82:1
+✖ backend health exposes flags, no keys, real blocked runs persist (22.7711ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  500 !== 200
+  
+      at TestContext.<anonymous> (file:///C:/Users/73789/Documents/Codex/2026-10-15/referenced-chatgpt-conversation-this-is-an/outputs/geo-growth/tests/api.test.mjs:88:10)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 500,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

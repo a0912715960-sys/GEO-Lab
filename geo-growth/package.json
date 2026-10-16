@@ -1,0 +1,26 @@
+{
+  "name": "geo-signal-platform",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "build": "node scripts/build.mjs",
+    "format": "node scripts/format.mjs",
+    "package": "node scripts/package.mjs",
+    "verify": "node scripts/verify-package.mjs",
+    "test": "node --test tests/platform.test.mjs tests/monitor.test.mjs tests/api.test.mjs",
+    "test:e2e": "node tests/browser.mjs",
+    "test:startup": "node tests/browser.mjs --startup"
+  },
+  "engines": {
+    "node": ">=22.9"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "prettier": "3.9.10",
+    "jszip": "3.10.1",
+    "marked": "17.0.5",
+    "playwright": "1.62.1"
+  }
+}

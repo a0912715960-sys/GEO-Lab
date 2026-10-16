@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.local
+runtime/
+*.tar.gz
+*.zip
+/dist/
+/OFFLINE-DEMO.html
+/evidence/manifest.json
+/evidence/source-history.bundle
+/evidence/history.txt

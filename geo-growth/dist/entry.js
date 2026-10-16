@@ -1,0 +1,1 @@
+if(location.protocol==='file:')location.replace(new URL('../OFFLINE-DEMO.html',location.href));else{const script=document.createElement('script');script.src='./app.js';script.onerror=()=>window.__geoStartupFail('应用文件加载失败');document.head.append(script);}

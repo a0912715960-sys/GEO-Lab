@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 3,
+  "sourceCommit": "ecec9416f4db9364f57c277d8a24003160df0491",
+  "bundleSha256": "c165e9962814898461d08e4edc2a7193b3031d48f5b0830da0b58288998887a6",
+  "excluded": [
+    ".git",
+    ".openai",
+    "node_modules",
+    "runtime",
+    ".env",
+    ".env.local",
+    "Git history bundles",
+    "historical attachments"
+  ],
+  "files": [
+    {
+      "path": "geo-growth/.env.example",
+      "bytes": 237,
+      "sha256": "38474df77f9186b20cd666a4db5c79abea235e5ea9a9f0a2bbf7e1d64ce7b2f9"
+    },
+    {
+      "path": "geo-growth/.gitattributes",
+      "bytes": 48,
+      "sha256": "250c48456f3051da0adc6541cef06f6937a7c89ddbef59a387d980ce0e579e65"
+    },
+    {
+      "path": "geo-growth/.gitignore",
+      "bytes": 158,
+      "sha256": "560e12d0c54d16930b8b6d6cb3e5098f2a64564a35321cadd04598d73ecdc581"
+    },
+    {
+      "path": "geo-growth/data/catalog-fixture.xlsx",
+      "bytes": 4897,
+      "sha256": "8942424a4a27ce6ee0ecd0e01c7112012da4b6ffe9247e628949ab55a1665328"
+    },
+    {
+      "path": "geo-growth/data/catalog-template.csv",
+      "bytes": 96,
+      "sha256": "0a36c57da536cf772b3066f43fb625290675413ccbdee7596e1c6774eb133ac0"
+    },
+    {
+      "path": "geo-growth/data/manual-fixture.docx",
+      "bytes": 36793,
+      "sha256": "acef95a22ccd44d13601dfccedaf5eedb6c3c54632fd74ee81f4a949e6fe5f2e"
+    },
+    {
+      "path": "geo-growth/data/manual-fixture.pdf",
+      "bytes": 1403,
+      "sha256": "31a61feaf2e1f5aad02155c55c0cd93405a0f3e8ed52ac6fc4da6b2d105fb841"
+    },
+    {
+      "path": "geo-growth/dist/app.js",
+      "bytes": 88810,
+      "sha256": "c165e9962814898461d08e4edc2a7193b3031d48f5b0830da0b58288998887a6"
+    },
+    {
+      "path": "geo-growth/dist/bootstrap.js",
+      "bytes": 1254,
+      "sha256": "bdaf1389d5b9059d84fd917cfef86e181ba21694250d8e992f51d3e4e91aff8d"
+    },
+    {
+      "path": "geo-growth/dist/build.json",
+      "bytes": 748,
+      "sha256": "223ab3400a61c9ac3430457409047fab8373448e54d0c5c73322dc76068367f6"
+    },
+    {
+      "path": "geo-growth/dist/entry.js",
+      "bytes": 270,
+      "sha256": "5d49f41ac2c8a25e0e8a4939c9f2c7be02b65f3e771bbbf03bcecb5a1d46ba3b"
+    },
+    {
+      "path": "geo-growth/dist/index.html",
+      "bytes": 751,
+      "sha256": "be0ef65556fef715497bc7b87665ee4f0fec60af7de078b9389f37fb31f3e61c"
+    },
+    {
+      "path": "geo-growth/dist/style.css",
+      "bytes": 15353,
+      "sha256": "77fb6c64cb3f94c6e75542f5aaa8e5dd9ed0d3be73391082ca81023ed270d506"
+    },
+    {
+      "path": "geo-growth/docs/ARCHITECTURE.md",
+      "bytes": 4675,
+      "sha256": "e8a2eb5641f7f4a8b27317859b856fd912283b8e99de0ab521fc7f3c7606ee80"
+    },
+    {
+      "path": "geo-growth/docs/DEMO-SCRIPT.md",
+      "bytes": 1545,
+      "sha256": "3ea524db30e76d90571d5472f5de5d6006af94b7b313728127e9a316ad6653ca"
+    },
+    {
+      "path": "geo-growth/docs/PRD.md",
+      "bytes": 5595,
+      "sha256": "c544b5b6dc8549f148beb4bdad690c511091de4e821fe9c838a13fdd342bf510"
+    },
+    {
+      "path": "geo-growth/docs/RESEARCH.md",
+      "bytes": 2847,
+      "sha256": "f3af106801c762307b5a36fdca2d08b0106e2c857d69e237175ed58529da5ad0"
+    },
+    {
+      "path": "geo-growth/evidence/approved-export.json",
+      "bytes": 4621,
+      "sha256": "e7723d70a9ac39a260b5b1c51efb3f75a7ebf3a530367eac4dfa13d1886582e6"
+    },
+    {
+      "path": "geo-growth/evidence/browser-launch-blocked.log",
+      "bytes": 8331,
+      "sha256": "256f440d32113c24060b7239698ac55691b92ff07537c5db42e56232e692cb0c"
+    },
+    {
+      "path": "geo-growth/evidence/browser-ui.json",
+      "bytes": 1905,
+      "sha256": "087d7c9ef2fdc6f1e729724584a2b0c9300d9c352cbeca6d5c8f0ba7087de262"
+    },
+    {
+      "path": "geo-growth/evidence/cleanup-audit.json",
+      "bytes": 173,
+      "sha256": "cb4c887be92a64ee17770be8eeb419a78f27675a3c24dd999341db37628e7392"
+    },
+    {
+      "path": "geo-growth/evidence/COMMANDS.md",
+      "bytes": 1342,
+      "sha256": "523a0f2050ba81898e8d5d461b0fb9773f5d48bdcb5d4b0910cc2f4058383a58"
+    },
+    {
+      "path": "geo-growth/evidence/e2e-state.json",
+      "bytes": 180502,
+      "sha256": "d99b5a074cdfdf74fcce94a5b30ed069f4bb8df2ac1625395ded3d4ddcc16759"
+    },
+    {
+      "path": "geo-growth/evidence/e2e.log",
+      "bytes": 1196,
+      "sha256": "8e9b7222cab9dbbc521d94331329931d42aef8220453d7902116e762a7d0ec44"
+    },
+    {
+      "path": "geo-growth/evidence/http-verification.json",
+      "bytes": 4163,
+      "sha256": "59770fe56dffc6672aa3ab4f76f4b55e0d4fa24f001d1d4c52f731e753a9aae8"
+    },
+    {
+      "path": "geo-growth/evidence/initial-unit-failure.log",
+      "bytes": 4998,
+      "sha256": "949fd89ff143fb751d0f3e327cdacffebbf77ef4b2ee9ad76fd74f486ee2d69a"
+    },
+    {
+      "path": "geo-growth/evidence/quality-summary.json",
+      "bytes": 345,
+      "sha256": "77a14723bdb8ab63e6eefe6afc736560b471f9fdf671977996586a9a9cb08117"
+    },
+    {
+      "path": "geo-growth/evidence/reviewed-preview.json",
+      "bytes": 4171,
+      "sha256": "4069c824d74d4a80008e3f0a32176bf8edd659b2b2ce74cc2bea289281de8b6b"
+    },
+    {
+      "path": "geo-growth/evidence/screenshots/v3-content-approved.jpg",
+      "bytes": 94063,
+      "sha256": "26f561b48d5edc0c08375ce1c1eb8c80c8822bfffd97f30fe4db77326ff18318"
+    },
+    {
+      "path": "geo-growth/evidence/screenshots/v3-content-draft.jpg",
+      "bytes": 120260,
+      "sha256": "18156ccd595c085f05e4da4572bcbc09961cb20f88530ae50946f25b914cfe11"
+    },
+    {
+      "path": "geo-growth/evidence/screenshots/v3-evidence.jpg",
+      "bytes": 74318,
+      "sha256": "52139ca75d933b90778de3b5217c2a289ea0c5b14bdb43951d3005abbcd8528e"
+    },
+    {
+      "path": "geo-growth/evidence/screenshots/v3-experiments.jpg",
+      "bytes": 59422,
+      "sha256": "842a1b3531718fd053bccee3d54733d9e753ea27b1b71280e7e7b10dc9317164"
+    },
+    {
+      "path": "geo-growth/evidence/screenshots/v3-knowledge.jpg",
+      "bytes": 114714,
+      "sha256": "59ce94945cff9eca9b805e91e73344991841e1697e678d64dc04f8ca357d2161"
+    },
+    {
+      "path": "geo-growth/evidence/screenshots/v3-mobile.jpg",
+      "bytes": 60404,
+      "sha256": "8670df225d431869c4d3c4cdc89e89a156c9a48104537bc59fc02c14ffde4d03"
+    },
+    {
+      "path": "geo-growth/evidence/screenshots/v3-overview.jpg",
+      "bytes": 59630,
+      "sha256": "d1d94564af38027b0772bd8219d1c0976a42ad617d410dcc5e1e31b429d0a033"
+    },
+    {
+      "path": "geo-growth/evidence/screenshots/v3-plans-blocked.jpg",
+      "bytes": 97890,
+      "sha256": "8f39834af83014d33dac166e91e8ba49ec43438a3f5203665144a310f145e037"
+    },
+    {
+      "path": "geo-growth/evidence/screenshots/v3-prompts.jpg",
+      "bytes": 107752,
+      "sha256": "a56ccd2fcf85d5751f8ee0ea87dc63802da2a257be37035c156e08e9679f1c79"
+    },
+    {
+      "path": "geo-growth/evidence/screenshots/v3-real-blocked.jpg",
+      "bytes": 95578,
+      "sha256": "d7a8d6f41f5506ad4f8d7b26feae197fcea3712d8dc96d76e84bd29e96182197"
+    },
+    {
+      "path": "geo-growth/evidence/screenshots/v3-sources.jpg",
+      "bytes": 43325,
+      "sha256": "67037745ed1e300c944597fa0af5a0bd09b533d590b1d4cd396124a13db81455"
+    },
+    {
+      "path": "geo-growth/evidence/TEST-REPORT.md",
+      "bytes": 4800,
+      "sha256": "746939681be64341011afb17fc8430d1faff8a6d9c0b32332973b246de17afef"
+    },
+    {
+      "path": "geo-growth/evidence/unit-integration.log",
+      "bytes": 4176,
+      "sha256": "1b1232eae587a32d59b7d3c6afd58b66193ce80a83e383b1702f2afa996c8739"
+    },
+    {
+      "path": "geo-growth/monitor.mjs",
+      "bytes": 9208,
+      "sha256": "505d05c00cdf319ff02a58706b35d75d767890098dae819bd0569536305ee592"
+    },
+    {
+      "path": "geo-growth/OFFLINE-DEMO.html",
+      "bytes": 106195,
+      "sha256": "36480912296600189374ff4e73452cbf0b8021f27b4ebdf52d10a457d8774b44"
+    },
+    {
+      "path": "geo-growth/package.json",
+      "bytes": 731,
+      "sha256": "e1d8d82cc0030b11d98aff38c35a494a4e19a0f9e9d1299fca8148b497232056"
+    },
+    {
+      "path": "geo-growth/pnpm-lock.yaml",
+      "bytes": 12619,
+      "sha256": "f0b136f7a55ffa323bc009415371f6d907c20e58d047198d0900fdc12a1b8809"
+    },
+    {
+      "path": "geo-growth/README.md",
+      "bytes": 4277,
+      "sha256": "354d63288bdc7cd2f9137e53c2c36e054961ed621b45579462279352d1cb820d"
+    },
+    {
+      "path": "geo-growth/scripts/build.mjs",
+      "bytes": 3916,
+      "sha256": "77b8837a3fd3f3e160f43a872f61c688751036b6efeb9ed7157700e25f711ff0"
+    },
+    {
+      "path": "geo-growth/scripts/extract.py",
+      "bytes": 2198,
+      "sha256": "d68247361c2c4e79cc5195d7ebdbd588c11371034a79f46ffb1a436be3b20b41"
+    },
+    {
+      "path": "geo-growth/scripts/format.mjs",
+      "bytes": 802,
+      "sha256": "86958d930cf42d1cd339997b8f41b1f2d91207ffde419087cf0a65a25072f661"
+    },
+    {
+      "path": "geo-growth/scripts/package.mjs",
+      "bytes": 5983,
+      "sha256": "2cb8ea3e388a90725c47ba0737174199de58e9b7ad6ccc76b18fc39375964f03"
+    },
+    {
+      "path": "geo-growth/scripts/report.mjs",
+      "bytes": 5634,
+      "sha256": "eec4093efbed5dd4d68025e5fa028d8b035920343436e4cfa02190290dbfaec3"
+    },
+    {
+      "path": "geo-growth/scripts/tools.mjs",
+      "bytes": 560,
+      "sha256": "6200eafb8520d52144ebf479d1ec363bc076ec55fd64be6b4d4c3b4ffbf227bb"
+    },
+    {
+      "path": "geo-growth/scripts/verify-package.mjs",
+      "bytes": 2750,
+      "sha256": "fed0d0877569324fd69c53797c2df29a724cb9ec5a20b430be7d94ac168cac40"
+    },
+    {
+      "path": "geo-growth/server.mjs",
+      "bytes": 8838,
+      "sha256": "e8fd9f49e1abec171579a956bbd215ec91216d61789549c9b010dca8d0db59d2"
+    },
+    {
+      "path": "geo-growth/src/bootstrap.js",
+      "bytes": 1254,
+      "sha256": "bdaf1389d5b9059d84fd917cfef86e181ba21694250d8e992f51d3e4e91aff8d"
+    },
+    {
+      "path": "geo-growth/src/hash.mjs",
+      "bytes": 3144,
+      "sha256": "9c83b0329b67ce6e776d55183c305b47cd5fe2c613a5784934057dafb5238b10"
+    },
+    {
+      "path": "geo-growth/src/platform.mjs",
+      "bytes": 31142,
+      "sha256": "ddf358b33506faca8c559ab37291ba93119321e8e7628fbf9c7d4fd02d567b70"
+    },
+    {
+      "path": "geo-growth/src/style.css",
+      "bytes": 15353,
+      "sha256": "77fb6c64cb3f94c6e75542f5aaa8e5dd9ed0d3be73391082ca81023ed270d506"
+    },
+    {
+      "path": "geo-growth/src/ui.mjs",
+      "bytes": 45143,
+      "sha256": "88d6c4336c74d27d591d0fa3f4fc35b58e07edbd2627f20ebd181ae99c1e5e25"
+    },
+    {
+      "path": "geo-growth/start-demo.cmd",
+      "bytes": 275,
+      "sha256": "504e491d7ba6ae44434f48d303192c8592fc36264525cb808adc2b465f897bb4"
+    },
+    {
+      "path": "geo-growth/tests/api.test.mjs",
+      "bytes": 7065,
+      "sha256": "b8922db612ad39ee377aad75430e6817fd922e4ba50da53f95ec26b5602e4120"
+    },
+    {
+      "path": "geo-growth/tests/browser.mjs",
+      "bytes": 9293,
+      "sha256": "a3b913dc7e891402535853d3ed905f0b9d6f9c7cc0c64f50dce53ba8312e371d"
+    },
+    {
+      "path": "geo-growth/tests/helpers.mjs",
+      "bytes": 2954,
+      "sha256": "faf02ba7c636405c702c23ec4626170a6e295c715ef575bf8bad1e4bb6768049"
+    },
+    {
+      "path": "geo-growth/tests/make-fixtures.py",
+      "bytes": 944,
+      "sha256": "b0c52cc27194d1214679ae1cd59029bd440a245fb31641fa74b792fdff1229f9"
+    },
+    {
+      "path": "geo-growth/tests/monitor.test.mjs",
+      "bytes": 8030,
+      "sha256": "087260dcea1843df90a7b3e0a372c435c89331abff3c0dc5fcf2cdce52993701"
+    },
+    {
+      "path": "geo-growth/tests/platform.test.mjs",
+      "bytes": 14667,
+      "sha256": "4a761acd09bc76401c6593f9f6e02598b733a4789c7703b8c70fb88b5319330c"
+    },
+    {
+      "path": "GEO-Growth-Demo.html",
+      "bytes": 106215,
+      "sha256": "2e0e1c3d6dc0fa298c9600368b0f9e17b2ea30d991596176a43448720919bdef"
+    },
+    {
+      "path": "GEO-Platform-Guide.html",
+      "bytes": 229196,
+      "sha256": "5cfb0e898a48516eddb1f9b5d3f2bfaa29315feedc604b79d68c24d8cb5fddd7"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "mode": "Codex in-app browser, actual local HTTP service",
+  "checks": [
+    {
+      "name": "HTTP real empty state",
+      "status": "passed",
+      "values": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "name": "Synthetic funnel",
+      "status": "passed",
+      "values": [
+        "100",
+        "32",
+        "18",
+        "12"
+      ]
+    },
+    {
+      "name": "C citation independent of brand",
+      "status": "passed"
+    },
+    {
+      "name": "Raw record to grounded diagnosis and draft",
+      "status": "passed"
+    },
+    {
+      "name": "Manual accept/reject + approved export equals reviewed preview",
+      "status": "passed",
+      "hash": "f8b700c5ccd97df5d8480836d67d20fee8e0cff09671e375b29900f45fee5cdd"
+    },
+    {
+      "name": "Generate and approve four locale-versioned prompts",
+      "status": "passed"
+    },
+    {
+      "name": "Create immutable plan and missing-key blocked execution",
+      "status": "passed"
+    },
+    {
+      "name": "Missing-key records excluded from effective denominator",
+      "status": "passed"
+    },
+    {
+      "name": "Actual CSV form import, SKU isolation, review and retrieval",
+      "status": "passed"
+    },
+    {
+      "name": "390px responsive layout no global overflow",
+      "status": "passed",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "name": "Sources drawer sanitized and reachable on short desktop",
+      "status": "passed"
+    },
+    {
+      "name": "Country filter changes denominator and excludes US fixture",
+      "status": "passed"
+    },
+    {
+      "name": "Retest UI blocks synthetic baseline from real improvement",
+      "status": "passed"
+    }
+  ],
+  "externalAPICalls": 0,
+  "notes": [
+    "Headless Edge launch blocked in Windows sandbox; automated script was not passed.",
+    "File protocol browser preview blocked; HTTP UI tests executed instead."
+  ]
+}
